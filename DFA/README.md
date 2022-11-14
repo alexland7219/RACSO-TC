@@ -226,4 +226,4 @@ _Note: This exercise follows the trend of the previous ones. Now we have to keep
 | **T** | T | T | + |
 </div>
 
-_Yeah..._
+_Note: If you really think about it, any word of length 3 over \{a, b\} will always have either an even number of a's or of b's_
