@@ -221,8 +221,8 @@ _Note: This exercise follows the trend of the previous ones. Now we have to keep
   
 <div align="center">
 
-    | | a | b | |
-    | **T** | T | T | + |
+| | a | b | |
+| **T** | T | T | + |
 </div>
 
 _Yeah..._
