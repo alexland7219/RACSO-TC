@@ -44,5 +44,44 @@ Describe the minimum DFA that recognizes the language of the words over $\\{a, \
 | **O** | E | O | |
 </div>
 
-_Note: E for 'even' and 'O' for odd._
+_Note: E for 'even' and O for 'odd'._
+
+### Exercise 2: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2}\wedge |w|_b\in\dot{2} \\}$ 
+
+Describe the minimum DFA that recognizes the language of words over $\\{a, b\\}$ with an even number of _a_'s, and an even number of _b_'s.
+
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **EE** | OE | EO | + |
+| **EO** | OO | EE | |
+| **OE** | EE | OO | |
+| **OO** | EO | OE | |
+</div>
+
+### Exercise 3: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\notin\dot{2}\vee |w|_b\notin\dot{2} \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ with an odd number of _a_'s or an odd number of _b_'s.
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **EE** | OE | EO | |
+| **EO** | OO | EE | + |
+| **OE** | EE | OO | + |
+| **OO** | EO | OE | + |
+</div>
+
+### Exercise 4: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x: w=xa \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in _a_.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **N** | Y | N | |
+| **Y** | Y | N | + |
+</div>
 
