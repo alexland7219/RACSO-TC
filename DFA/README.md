@@ -101,3 +101,21 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with
 | **Y** | N | B | + |
 </div>
 
+### Exercise 6: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x: w=xbabab \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with _babab_.
+
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **N** | N | B | |
+| **B** | A | B | |
+| **A** | N | D | |
+| **D** | C | B | |
+| **C** | N | Y | |
+| **Y** | C | B | + | 
+</div>
+
+_Note: Always ask yourself in which state we end up if the word breaks the sequence babab at some state._
+
