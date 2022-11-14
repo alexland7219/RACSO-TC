@@ -37,7 +37,7 @@ and the rows are indexed by states.
 Describe the minimum DFA that recognizes the language of the words over $\\{a, \\}$ which have an even number of _a_'s.
 
 <div align="center">
-| | a | b | |
+|  | a | b |  |
 |---|---|---|---|
 | P | I | P | + |
 | I | P | I | |
