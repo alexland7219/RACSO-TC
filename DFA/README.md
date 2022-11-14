@@ -14,7 +14,7 @@ recognizing the language over the alphabet $\\{a, b \\}$ with at least one occur
 <p align="center">
 <img src="https://i.imgur.com/xHMUuFS.png" alt="DFA Example">
 </p>
-<div style="text-align: center;">_Image 1: DFA that recognizes the language_ $\\{ w \in \\{a,b \\}^* \mid |w|_a > 0 \\}$</div>
+_Image 1: DFA that recognizes the language_ $\\{ w \in \\{a,b \\}^* \mid |w|_a > 0 \\}$
 
 The previous DFA can be described with the basic format as follows:
 
