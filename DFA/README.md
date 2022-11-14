@@ -10,15 +10,13 @@ state since, by default, it is the first one to appear.
 In order to conclude, we give an illustrative example. Consider the minimum DFA
 recognizing the language over the alphabet $\\{a, b \\}$ with at least one occurrence of $a$:
 
-![DFA Example](https://i.imgur.com/K2dGZYM.png)
+![DFA Example](https://i.imgur.com/xHMUuFS.png)
 
-Image 1: DFA that recognizes the language $\\{ w \in \\{a,b \\}^* \mid |w|_a\ge 0 \\}$
+_Image 1: DFA that recognizes the language $\\{ w \in \\{a,b \\}^* \mid |w|\_a\ge 0 \\}$_
 The previous DFA can be described with the basic format as follows:
 
-```sh
-    a  b
-q0  q1 q0
-q1  q1 q1 +
-```
-
+| Q | a | b | ? |
+|---|---|---|---|
+| q0 | q1 | q0 | |
+| q1 | q1 | q1 | + |
 
