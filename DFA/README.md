@@ -216,3 +216,15 @@ Describe the minimum DFA that recognizes the language of the words over $\\{a, b
 </div>
 
 _Note: This exercise follows the trend of the previous ones. Now we have to keep track of our past two symbols in order to determine if we fall in the **W**ell._
+
+### Exercise 13: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y,z: ( (w=xyz \wedge |y|=3) \Rightarrow (|y|_a\in\dot{2} \vee |y|_b\in\dot{2}) ) \\}$
+
+<details>
+  <summary>SPOILER WARNING: Really think about it...</summary>
+  
+<div align="center">
+
+    | | a | b | |
+    | **T** | T | T | + |
+</div>
+</details>
