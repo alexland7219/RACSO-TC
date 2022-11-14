@@ -145,7 +145,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that t
 | **A** | A | B | + |
 | **B** | W | A | + |
 | **W** | W | W | |
-<div>
+</div>
 
 _Note: This is our first introduction to our "**W**ell" state. We start reading the word until we find one _a_ with an odd number of _b_'s to its left. In that case we don't care about the rest of the word anymore. From the **W**ell you may never escape._
 
@@ -161,7 +161,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that t
 | **A** | A | C | + |
 | **C** | W | A | |
 | **W** | W | W | |
-<div>
+</div>
 
 ### Exercise 10: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: ( (w=xy \wedge |x|\geq 3) \Rightarrow (|x|_a\in\dot{2}\vee |x|_b\in\dot{2}) ) \\}$
 
