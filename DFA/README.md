@@ -8,7 +8,7 @@ a symbol + when the state is accepting. Note that there is no way for specifying
 state since, by default, it is the first one to appear.
 
 In order to conclude, we give an illustrative example. Consider the minimum DFA
-recognizing the language over the alphabet ${a, b}$ with at least one occurrence of $a$:
+recognizing the language over the alphabet $\{a, b \}$ with at least one occurrence of $a$:
 
 ![DFA Example](https://i.imgur.com/K2dGZYM.png)
 
