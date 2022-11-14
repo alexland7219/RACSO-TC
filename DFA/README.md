@@ -36,7 +36,7 @@ and the rows are indexed by states.
 
 ### Exercise 1: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2} \\}$
 
-Describe the minimum DFA that recognizes the language of the words over $\\{a, \\}$ which have an even number of _a_'s.
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ which have an even number of _a_'s.
 
 <div align="center">
 
@@ -180,3 +180,39 @@ Describe the minimum DFA that recognizes the language of the words over $\\{a, b
 | **H** | E | W | + |
 | **W** | W | W | |
 </div>
+
+### Exercise 11: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: ( (w=xy \wedge |x|\geq 3) \Rightarrow (|x|_a\in\dot{2}\vee |x|_b\notin\dot{2}) ) \\}$
+
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ such that every prefix of length greater than or equal to $3$ has an even number of _a_'s or an odd number of _b_'s.
+
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **A** | C | B | + |
+| **B** | D | E | + |
+| **C** | E | D | + |
+| **D** | B | W | + |
+| **E** | W | B | + |
+| **W** | W | W | |
+</div>
+
+### Exercise 12: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y,z: ( (w=xyz \wedge |y|=3) \Rightarrow (|y|_a\in\dot{2} \vee |y|_b\notin\dot{2}) ) \\}$
+
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ whose subwords of length $3$ have an even number of _a_'s or an odd number of _b_'s.
+
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **S** | A | B | + |
+| **A** | X | Z | + |
+| **B** | U | Y | + |
+| **X** | W | Z | + |
+| **Y** | W | Y | + |
+| **Z** | U | W | + |
+| **U** | X | W | + |
+| **W** | W | W | |
+</div>
+
+_Note: This exercise follows the trend of the previous ones. Now we have to keep track of our past two symbols in order to determine if we fall in the **W**ell._
