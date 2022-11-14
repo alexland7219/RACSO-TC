@@ -32,6 +32,8 @@ state since it is the first one to appear. Finally, note that this format is rou
 to the automaton’s transition matrix, where the columns are indexed by alphabet symbols
 and the rows are indexed by states.
 
+## _RACSO exercises on DFAs_
+
 ### Exercise 1: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2} \\}$
 
 Describe the minimum DFA that recognizes the language of the words over $\\{a, \\}$ which have an even number of _a_'s.
@@ -83,5 +85,19 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in
 |---|---|---|---|
 | **N** | Y | N | |
 | **Y** | Y | N | + |
+</div>
+
+### Exercise 5: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x: w=xbba \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with _bba_.
+
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **N** | N | B | |
+| **B** | N | BB | |
+| **BB** | Y | BB | |
+| **Y** | N | B | + |
 </div>
 
