@@ -119,3 +119,18 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with
 
 _Note: Always ask yourself in which state we end up if the word breaks the sequence babab at some state._
 
+### Exercise 7: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x,y: (w=xaby \wedge |y|=1) \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that the symbol _a_ appears in the third from the last position, and the symbol _b_ appears in the penultimate position.
+
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **S** | A | S | |
+| **A** | A | B | |
+| **B** | C | D | |
+| **C** | A | B | + |
+| **D** | A | S | + |
+</div>
+
