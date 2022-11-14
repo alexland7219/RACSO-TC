@@ -246,4 +246,32 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that, 
 | **W** | W | W | |
 </div>
 
-_Note: In this case we combine a **W**ell with a special state, we will call the **Y**es state. Once we are in **Y** the word will always be accepted. Any word starting with ab will be accepted, for example._ 
+_Note: In this case we combine a **W**ell with a special state, we will call the **Y**es state. Once we are in **Y** the word will always be accepted. Any word starting with ab will be accepted, for example._
+
+### Exercise 15: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{bbb}=0 \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not contain the subword _bbb_.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **0** | 0 | 1 | + |
+| **1** | 0 | 2 | + |
+| **2** | 0 | W | + |
+| **W** | W | W | |
+</div>
+
+### Exercise 16: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{bab}=0 \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not contain the subword _bab_.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | S | A | + |
+| **A** | B | A | + |
+| **B** | S | W | + |
+| **W** | W | W | |
+</div>
