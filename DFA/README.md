@@ -229,3 +229,21 @@ Describe the minimum DFA that recognizes the language of the words over $\\{a, b
 </div>
 
 _Note: If you really think about it, any word of length 3 over \{a, b\} will always have either an even number of a's or of b's_
+
+### Exercise 14: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x: (w=bbx \Rightarrow |x|_{aa}=0) \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that, if they start with _bb_, then they do not contain _aa_.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | Y | B | + |
+| **B** | Y | C | + |
+| **C** | D | C | + |
+| **D** | W | C | + |
+| **Y** | Y | Y | + |
+| **W** | W | W | |
+</div>
+
+_Note: In this case we combine a **W**ell with a special state, we will call the **Y**es state. Once we are in **Y** the word will always be accepted. Any word starting with ab will be accepted, for example._ 
