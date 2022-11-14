@@ -31,3 +31,5 @@ an accepting state since it is marked with +, and _q0_ is implicitly assumed to 
 state since it is the first one to appear. Finally, note that this format is roughly equivalent
 to the automaton’s transition matrix, where the columns are indexed by alphabet symbols
 and the rows are indexed by states.
+
+### Exercise 1: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2} \\}$
