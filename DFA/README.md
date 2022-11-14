@@ -75,6 +75,9 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ with an odd
 | **OO** | EO | OE | + |
 </div>
 
+_Note: This exercise is the exact opposite of the previous one. To negate a DFA we just toggle the acceptance of all states.
+This is exactly why languages recognized by DFAs, regular languages, are closed under complement_
+
 ### Exercise 4: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x: w=xa \\}$
 
 Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in _a_.
