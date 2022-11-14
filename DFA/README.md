@@ -40,8 +40,8 @@ Describe the minimum DFA that recognizes the language of the words over $\\{a, \
 
 |  | a | b |  |
 |---|---|---|---|
-| *E* | O | E | + |
-| *O* | E | O | |
+| **E** | O | E | + |
+| **O** | E | O | |
 </div>
 
 _Note: E for 'even' and 'O' for odd._
