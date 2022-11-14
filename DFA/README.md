@@ -1,4 +1,4 @@
-# Deterministic Finite Automaton (Autòmat Finit Determinista)
+# Deterministic Finite Automaton
 ## _Basic format describing DFAs_
 
 In order to describe a DFA we write its alphabet in the first line, and in each of the following
@@ -14,7 +14,7 @@ recognizing the language over the alphabet $\\{a, b \\}$ with at least one occur
 <p align="center">
 <img src="https://i.imgur.com/xHMUuFS.png" alt="DFA Example">
 </p>
-<p align="center"><i>Image 1: DFA that recognizes the language</i> $\\{ w \in \\{a,b \\}^* \mid |w|_a > 0 \\}$</p>
+<div style="text-align: center;">_Image 1: DFA that recognizes the language_ $\\{ w \in \\{a,b \\}^* \mid |w|_a > 0 \\}$</div>
 
 The previous DFA can be described with the basic format as follows:
 
@@ -25,7 +25,7 @@ The previous DFA can be described with the basic format as follows:
 | q0 | q1 | q0 | |
 | q1 | q1 | q1 | + |
 </div>
-
+<br/>
 Note that the alphabet symbols are _a_ and _b_, and the states are _q0_ and _q1_. Moreover, _q1_ is
 an accepting state since it is marked with +, and _q0_ is implicitly assumed to be the starting
 state since it is the first one to appear. Finally, note that this format is roughly equivalent
