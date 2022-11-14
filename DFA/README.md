@@ -147,4 +147,36 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that t
 | **W** | W | W | |
 <div>
 
-_Note: This is our first introduction to our "**W**ell" state. We start reading the word until we find one _a_ with an odd number of _b_'s to its left. In that case we don't care about the rest of the word anymore. From the **W**ell you may never escape_ 
+_Note: This is our first introduction to our "**W**ell" state. We start reading the word until we find one _a_ with an odd number of _b_'s to its left. In that case we don't care about the rest of the word anymore. From the **W**ell you may never escape._
+
+### Exercise 9: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: (w=xay \Rightarrow |y|_b\in\dot{2}) \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that to the right of each occurrence of _a_ there is an even number of _b_'s.
+
+<div align="center">
+
+|  | a | b | |
+|---|---|---|---|
+| **S** | A | S | + |
+| **A** | A | C | + |
+| **C** | W | A | |
+| **W** | W | W | |
+<div>
+
+### Exercise 10: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: ( (w=xy \wedge |x|\geq 3) \Rightarrow (|x|_a\in\dot{2}\vee |x|_b\in\dot{2}) ) \\}$
+
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ such that every prefix of length greater than or equal to $3$ has an even number of _a_'s or an even number of _b_'s.
+
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **A** | C | B | + |
+| **B** | D | E | + |
+| **C** | E | D | + |
+| **D** | G | H | + |
+| **E** | H | G | + |
+| **G** | W | E | + |
+| **H** | E | W | + |
+| **W** | W | W | |
+</div>
