@@ -16,12 +16,12 @@ recognizing the language over the alphabet $\\{a, b \\}$ with at least one occur
 
 </div> 
 
-_Image 1: DFA that recognizes the language $\\{ w \in \\{a,b \\}^* \mid |w|\_a\ge 0 \\}$_
+_Image 1: DFA that recognizes the language $\\{ w \in \\{a,b \\}^* \mid |w|_a\ge 0 \\}$_
 The previous DFA can be described with the basic format as follows:
 
 <div align="center">
 
-| Q | a | b | ? |
+|  | a | b |  |
 |---|---|---|---|
 | q0 | q1 | q0 | |
 | q1 | q1 | q1 | + |
