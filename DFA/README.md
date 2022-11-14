@@ -33,3 +33,13 @@ to the automaton’s transition matrix, where the columns are indexed by alphabe
 and the rows are indexed by states.
 
 ### Exercise 1: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2} \\}$
+
+Describe the minimum DFA that recognizes the language of the words over $\\{a, \\}$ which have an even number of _a_'s.
+
+<div align="center">
+| | a | b | |
+|---|---|---|---|
+| P | I | P | + |
+| I | P | I | |
+</div>
+
