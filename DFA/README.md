@@ -219,6 +219,8 @@ _Note: This exercise follows the trend of the previous ones. Now we have to keep
 
 ### Exercise 13: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y,z: ( (w=xyz \wedge |y|=3) \Rightarrow (|y|_a\in\dot{2} \vee |y|_b\in\dot{2}) ) \\}$
   
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ whose subwords of length $3$ have an even number of _a_'s or an even number of _b_'s.
+
 <div align="center">
 
 | | a | b | |
