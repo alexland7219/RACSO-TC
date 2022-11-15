@@ -543,3 +543,23 @@ main
 }
 ```
 
+### Exercise 19: Regular description for $\\{ \mathtt{intercal}(w_1,w_2) \mid w_1,w_2\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|\ \wedge\ \mathtt{value}_2(w_1)&lt;\mathtt{value}_2(w_2) \\}, where $\mathtt{intercal}(a_1w_1,\ldots,a_nw_n)=a_1\ldots a_n\mathtt{intercal}(w_1,\ldots,w_n)$ and $\mathtt{intercal}(\lambda,\ldots,\lambda)=\lambda$
+
+Give a regular description for the set of words obtained by intercaling two words $w_1$, $w_2$ over $\\{0,1\\}$ with the same length and such that the natural number obtained by interpreting $w_1$ as a binary number, that is $\mathtt{value}_2(w_1)$, is smaller than $\mathtt{value}_2(w_2)$.
+
+```c++
+main
+{
+	DFA = "
+		0 1
+	I	A B
+	A	I Y
+	B	M I
+	Y	W W +
+	W	Y Y
+	M	M M
+	";
+  
+ 	output DFA;
+}
+```
