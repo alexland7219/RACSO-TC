@@ -344,7 +344,7 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 
 _Note: Now our alphabet is_ $\Sigma=\\{0, 1\\}$ _and words are binary numbers. In binary, multiples of_ $2$ _are those that end in a_ $0$
 
-### Exercise 21: Minimum DFA $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{3} \\}$
+### Exercise 21: Minimum DFA for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{3} \\}$
 
 Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that interpreted in binary represent a natural number multiple of $3$ (in particular, the empty word represents $0$, which is multiple of $3$).
 
@@ -358,3 +358,16 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 </div>
 
 _Note: Consider three states for the remainder of the word modulus_ $3$ _. Adding a_ $0$ _is equivalent to multiplying by two, and adding a_ $1$ _means multiplying by two then adding one_
+
+### Exercise 22: Minimum DFA for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\notin\dot{3} \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that interpreted in binary represent a natural number which is not multiple of $3$ (in particular, the empty word represents $0$, which is multiple of $3$).
+
+<div align="center">
+
+| | 0 | 1 | |
+|---|---|---|---|
+| **M0** | M0 | M1 | |
+| **M1** | M2 | M0 | + |
+| **M2** | M1 | M2 | + |
+</div>
