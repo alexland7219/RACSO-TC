@@ -295,3 +295,22 @@ A -> ScScS
 K -> SaSbS | SbSaS | SbSbS | SaSaS
 ```
 
+### Exercise 27: CFG for $\{ w \in \{a,b\}^* \mid 2|w|_a=|w|_b \}$
+
+Write a CFG generating the words over $\\{a, b\\}$ such that the number of occurrences of $b$ is twice the number of occurrences of $a$.
+
+```py
+S -> SaSbSbS | SbSbSaS | SbSaSbS |
+```
+
+### Exercise 28: Non-ambiguous CFG for $\\{ w \in \\{a,b\\}^* \mid |w|_a=|w|_b \\}$
+
+Write a **non-ambiguous** CFG generating the words over $\\{a, b\\}$ with the same number of $a$'s and $b$'s.
+
+```py
+S -> aAS | bBS |
+A -> aAA | b
+B -> bBB | a
+```
+
+_Note: Such a word can be defined as the concatenation of several words where the number of a's equals the number of b's that cannot be further divided_
