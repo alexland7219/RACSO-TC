@@ -128,4 +128,54 @@ main
 _Note: This is without DFAs after converting oneAAA to a Regular expression by hand_
 
 
-### Exercise 4: Regular description for 
+### Exercise 4: Regular description for $\\{ w \in \\{a,b\\}^* \mid |w|\_\{aba\}=|w|\_\{bab\}=1 \\}$
+
+Give a regular description for the set of words over $\\{a, b\\}$ such there is exactly one occurrence of $aba$ and of $bab$.
+
+```c++
+main
+{
+
+  	oneABA = "
+			a   b 
+		I	A   I
+		A	A   AB
+		AB	YA  I
+		YA  YA  C +
+		C	M   YB +
+		YB  YA  YB +
+		M	M   M
+	";
+  
+    	oneBAB = substitution(oneABA, "a"->"b", "b"->"a");
+
+  
+	output oneABA & oneBAB ; 
+}
+```
+
+_Note: I've given just one possible solution. There's many more as I've shown before_
+
+### Exercise 5: Regular description for $\\{ w \in \\{a,b\\}^* \mid \exists w_1,w_2: (w=w_1aw_2\ \wedge\ |w_2|=5)\ \wedge\ |w|\_\{bbb\}&gt;0 \\}$
+
+Give a regular description for the set of words over $\\{a, b\\}$ such that there is an $a$ at positions six from the end, and there is at least one occurrence of $bbb$.
+
+```c++
+main
+{
+    oneBBB = "
+			a  b 
+		I	I  A 
+		A	I  AA
+		AA	I  Y 
+		Y   Y  Y +
+	";
+
+  	a = "a";
+  	b = "b";
+  	ab = a | b;
+  
+	output ab* a ab ab ab ab ab & oneBBB ; 
+}
+```
+
