@@ -240,3 +240,7 @@ _Note: Notice how anything inside a parenthesis must be well-parenthesized, and 
 ### Exercise 21: CFG for the well-parenthesized words over $\\{ [ , ] , ( , ) \\}$
 
 Write a CFG generating the language of the well-paranthesized words over $\\{ [ , ] , ( , ) \\}$. For example, $()[()]$ and $[[(()[])]]$ are well-paranthesized words, whereas $][$ and $(()$ are not. One way to define more precisely this language is to describe it as the set of words that can be reduced to the empty word by successive applications of the rewrite rules $()\to\lambda$ and $[]\to\lambda$.
+
+```py
+S -> S(S)S | S[S]S |
+```
