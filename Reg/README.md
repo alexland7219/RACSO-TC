@@ -386,3 +386,45 @@ main
     output substitution(DFA, "c"->"a", "d"->"b");
 }
 ```
+
+### Exercise 13: Regular description for the language recognized by the NFA with set of states $\\{0,1,2,3,4,5\\}$, initial states $\\{2,5\\}$, accepting state $4$, and transitions $\delta(0,a)=\\{1,3\\}$, $\delta(0,b)=4$, $\delta(1,a)=4$, $\delta(1,b)=\\{2,3\\}$, $\delta(2,b)=5$, $\delta(3,a)=2$, $\delta(4,a) = \\{0,5\\}$, $\delta(4,b)=\\{0,2\\}$, $\delta(5,a)=4$
+
+Give a regular description for the language recognized by the NFA represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-nfa2.png).
+
+```c++
+main
+{
+	DFA1 = 
+	  "
+	  	a x b y 
+	2	M M 5 5
+	0	1 3 4 4
+	1	4 4 2 3
+	3	2 2 M M 
+	4	0 5 2 0 +
+	5	4 4 M M 
+	M 	M M M M
+	  ";
+  
+  	DFA2 = 
+	  "
+	  	a x b y 
+	5	4 4 M M
+	2	M M 5 5
+	0	1 3 4 4
+	1	4 4 2 3
+	3	2 2 M M 
+	4	0 5 2 0 +
+	M 	M M M M
+	  ";
+
+  	langONE = substitution(DFA1, "x"->"a", "y"->"b");
+  	langTWO = substitution(DFA2, "x"->"a", "y"->"b");
+  
+  	output langONE | langTWO;
+}
+```
+
+_Note: One DFA for each possible initial state_
+
+### Exercise 14: Regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $4$ in the digraph with edges labelled with lengths whose set of nodes is $\\{0,1,2,3,4\\}$ and whose set of edges is $\\{0\xrightarrow{4}1,\;1\xrightarrow{4}2,\;1\xrightarrow{6}3,\;2\xrightarrow{4}0,\;2\xrightarrow{2}4,\;3\xrightarrow{2}0,\;4\xrightarrow{4}3\\}$
