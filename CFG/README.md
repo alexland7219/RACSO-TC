@@ -121,3 +121,15 @@ K -> aKb |
 ```
 
 _Note: We keep removing a's from the start and b's from the end until there are only a's and b's remaining, in which case we move to symbol **K**_
+
+### Exercise 11: Non-ambiguous CFG for $\\{ a^i b^j c^k \mid j=i+k \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $a^i b^j c^k$ such that the number of $b$'s coincides with the number of $a$'s plus the number of $c$'s.
+
+```py
+S -> aTb | bQc | aTbbQc |
+T -> aTb |
+Q -> bQc |
+```
+
+_Note: Notice how symbols **T** and **Q** recognize_ $\\{a^x b^x\\}$ _and_ $\\{b^x c^x\\}$ _respectively_ 
