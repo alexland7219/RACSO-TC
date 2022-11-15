@@ -328,3 +328,6 @@ main
 
 Give a regular description for the language recognized by the NFA represented here:
 
+<p align="center">
+<img src="https://i.imgur.com/SkKNhAJ.png" alt="NFA Exercise 12">
+</p>
