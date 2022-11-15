@@ -315,3 +315,17 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that have a
 </div>
 
 _Note: Just after reading the first abc we always go to state **C**. Afterwards if we were to read another abc we would go to **W**._
+
+### Exercise 19: Minimum DFA for $\\{ w \in \\{a,b,c\\}^* \mid \forall x,y,z: (w=xbybz \Rightarrow |y|_a\geq 2) \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that between every two occurrences of $b$ there are at least two occurrences of $a$.
+
+<div align="center">
+
+| | a | b | c | |
+|---|---|---|---|---|
+| **S** | F | S | F | + |
+| **F** | 1 | W | F | + |
+| **1** | S | W | 1 | + |
+| **W** | W | W | W | |
+</div>
