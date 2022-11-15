@@ -490,7 +490,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that contai
 | **Y** | Y | Y | + |
 </div>
 
-### Exercise 30: Minimum DFA for $\\{ w \in \{a,b\\}^* \mid |w|\_{ab}=|w|\_{ba} \\}$
+### Exercise 30: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|\_{ab}=|w|\_{ba} \\}$
 
 Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ which have the same number of occurrences of $ab$ as occurrences of $ba$.
 
