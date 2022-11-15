@@ -31,9 +31,20 @@ S -> aSb |
 
 ### Exercise 2: Non-ambiguous CFG for $\\{ a^n c b^n \mid n&gt;0 \\}$
 
-Write a **non-ambiguous** CFG generating the language over $\\{a, b\\}$ such that there is an occurrence of $c$ exactly in the middle, to its left there are only $a$'s (and there is at least one $a$), and to its right there are only $b$'s (and there is at least one $b$). Note that, since the only occurrence of $c$ must be exactly in the middle, the number of $a$'s must be equal to the number of $b$'s.
+Write a **non-ambiguous** CFG generating the words over $\\{a, b, c\\}$ such that there is an occurrence of $c$ exactly in the middle, to its left there are only $a$'s (and there is at least one $a$), and to its right there are only $b$'s (and there is at least one $b$). Note that, since the only occurrence of $c$ must be exactly in the middle, the number of $a$'s must be equal to the number of $b$'s.
 
 ```py
 S -> aKb 
 K -> aKb | c
 ```
+
+### Exercise 3: Non-ambiguous CFG for $\\{ a^i b^j \mid i\geq j \\}$
+
+Write a **non-ambiguous** generating the words of the form $a^i b^j$ where the number of $a$'s is at least the number of $b$'s.
+
+```py
+S -> aSb | aT |
+T -> aT |
+```
+
+_Note: We need two different symbols. Trying to merge everything into one would lead to ambiguity in the CFG_
