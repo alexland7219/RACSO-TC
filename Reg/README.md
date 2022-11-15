@@ -179,3 +179,58 @@ main
 }
 ```
 
+### Exercise 6: Regular description for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{12}\\}$
+
+Give a regular description for the set of words $w$ over $\\{0,1\\}$ such that the natural value obtained by interpreting $w$ as a binary number, that is $\mathtt{value}_2(w)$, is multiple of $12$ (in particular, the empty word represents $0$, which is multiple of $12$).
+
+```c++
+main
+{
+	mult3 = "
+		0 1
+	Z	Z U +
+	U 	D Z 
+	D 	U D
+	";
+  
+  	mult4 = "
+		0 1
+	K	K N +
+	N 	T N
+	T	K N
+	";
+	  
+	output mult3 & mult4;
+}
+```
+
+_Note: Multiples of 12 are those multiples of 3 and 4 simultaneously_
+
+### Exercise 7: Regular description for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{20}\\}$
+
+Give a regular description for the set of words $w$ over $\\{0,1\\}$ such that the natural value obtained by interpreting $w$ as a binary number, that is $\mathtt{value}_2(w)$, is multiple of $20$ (in particular, the empty word represents $0$, which is multiple of $20$).
+
+```c++
+main
+{
+    	mult4 = "
+		0 1
+	K	K N +
+	N 	T N
+	T	K N
+	";
+	
+  	mult5 = "
+		0 1
+	Z	Z U +
+	U	D T 
+	D	Q Z
+	T  	U D
+	Q	T Q
+	";
+  
+  	output mult4 & mult5;
+}
+```
+
+_Note: Multiples of 12 are those multiples of 4 and 5 simultaneously_
