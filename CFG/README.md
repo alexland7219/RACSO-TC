@@ -314,3 +314,14 @@ B -> bBB | a
 ```
 
 _Note: Such a word can be defined as the concatenation of several words where the number of a's equals the number of b's that cannot be further divided_
+
+### Exercise 29: Non-ambiguous CFG for $\\{ w \in \\{a,b,c\\}^* \mid |w|_a=|w|_b \\}$
+
+Write a **non-ambiguous** CFG generating the words over $\\{a,b,c\\}$ with the same amount of $a$'s and $b$'s.
+
+```py
+S -> aBS | bAS | cS |
+B -> aBB | b | cB
+A -> bAA | a | cA
+```
+
