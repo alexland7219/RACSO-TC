@@ -375,3 +375,12 @@ Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$,
 ```py
 TOO HARD LMAOOOO
 ```
+
+### Exercise 35: Non-ambiguous CFG for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge y^R \text\{ prefix of \} x \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$, $y$ are words over $\\{a, b\\}$ such that $y^R$ is prefix of $x$, i.e., such that $x$ can be written of the form $y^R z$ for some word $z$.
+
+```py
+S -> aSa | bSb | Qc
+Q -> aQ | bQ |
+```
