@@ -453,3 +453,30 @@ A -> aA | a
 B -> bB | b
 C -> cC | c |
 ```
+
+### Exercise 42: CFG for the complement of $\\{ wcw \mid w\in\\{a,b\\}^* \\}$
+
+Write a CFG (**which will be ambiguous**) generating the language of words over $\\{a,b,c\\}$ that are not of the form $wcw$, where $w$ is a word over $\\{a,b\\}$.
+
+```py
+S -> XcXcX | N | P | Q
+X -> aX | bX | cX |
+N -> aN | bN |
+P -> aXc | bXc | cXa | cXb | aPa | bPb | aPb | bPa
+Q -> RbX | TaX
+R -> aRa | aRb | bRa | bRb | aXc
+T -> aTa | aTb | bTa | bTb | bXc
+```
+
+### Exercise 43: CFG for the expressions over $\\{ + , - , * , / , ( , ) , 0 , 1, \ldots, 9 \\}"$
+
+Write a CFG generating the language of "well-formed" expressions over $\\{ + , - , * , / , ( , ) , 0 , 1, \ldots, 9 \\}$. For instance $23*(0 + 003)+15*4$ is a well-formed expression, whereas $13**15$ and $)(3$ are not. For simplicity, in this problem we exclude the use of $+$ and $-$ as unary operators, such that we also consider $+3$ or $-5$ are non-well-formed expressions.
+
+```py
+S -> NOS | POS | P | N
+P -> (S)
+N -> DN | D
+D -> 0|1|2|3|4|5|6|7|8|9
+O -> +|-|*|/
+```
+
