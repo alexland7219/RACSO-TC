@@ -399,3 +399,21 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 | **N** | F | N | + |
 | **F** | Y | N | + |
 </div>
+
+### Exercise 25: Minimum DFA for ### Exercise 23: Minimum DFA for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{5} \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that interpreted in binary represent a natural number multiple of $5$ (in particular, the empty word represents $0$, which is multiple of $5$).
+
+<div align="center">
+
+| | 0 | 1 | |
+|---|---|---|---|
+| **M0** | M0 | M1 | + |
+| **M1** | M2 | M3 | |
+| **M2** | M4 | M0 | |
+| **M3** | M1 | M2 | |
+| **M4** | M3 | M4 | |
+</div>
+
+_Note: Similar to <sub>Exercise 21</sub>, we have one state for every remainder modulus_ $5$
+
