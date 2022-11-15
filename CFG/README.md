@@ -177,3 +177,6 @@ S -> aSa | Sb | b
 ```
 
 ### Exercise 15: CFG for $\\{ a^\{n_0\} b a^\{n_1\} b \ldots a^\{n_\{m-1\}\} b a^\{n_m\} \mid m\geq 1 \wedge \exists I\subseteq\\{1,\ldots,m\\}: (n_0 = \sum_\{i\in I\} n_i) \\}$
+
+Write a CFG (**which will be ambiguous**) generating the words of the form $a^\{n_0\}ba^\{n_1\}b\ldots a^\{n_\{m-1\}\} b a^\{n_m\}$, with $m \ge 1$, for which $n_0$ is equal to the sum of a selection of naturals from $n_1, n_2, \ldots, n_m$, i.e., $n_0=\sum_\{i\in I\} n_i$ where $I\subseteq\\{1,\ldots,m\\}$. Note that, in particular, the selection might be empty, and therefore a word where $n_0$ is $0$ is necessarily correct.
+
