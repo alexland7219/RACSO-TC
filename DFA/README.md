@@ -628,6 +628,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that can be
 <div align="center">
 
 | | a | b | |
+|---|---|---|---|
 | **Y** | Y | Y | + |
 
 </div>
