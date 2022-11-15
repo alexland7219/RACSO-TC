@@ -533,3 +533,20 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ which have 
 | **B** | A | W | |
 | **W** | W | W | |
 </div>
+
+### Exercise 33: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{aba}+1=|w|_b \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that the number of occurrences of $aba$ is one less than the number of occurrences fo $b$.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | A | B | |
+| **A** | A | C | |
+| **C** | A | W | + |
+| **B** | D | W | + |
+| **D** | D | E | + |
+| **E** | D | W | |
+| **W** | W | W | |
+</div>
