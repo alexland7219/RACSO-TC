@@ -473,4 +473,4 @@ main
 }
 ```
 
-### Exercise 16: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid |w|\_a\in\dot{2} \\}$ and $\sigma$ is the transducer with states $\\{0,1,2\\}$, initial state $0$, and transitions $0\xrightarrow{a\,|\,aba}1,\ 0\xrightarrow{b\,|\,bb}2,\ 1\xrightarrow{a\,|\,b}2,\ 1\xrightarrow{b\,|\,a}0,\ 2\xrightarrow{a\,|\,a}1,\ 2\xrightarrow{b\,|\,bbba}0$
+### Exercise 16: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid |w|\_a\in\dot{2} \\}$ and $\sigma$ is the transducer with states $\\{0,1,2\\}$, initial state $0$, and transitions $0\xrightarrow{a\ |\ aba}1,\ 0\xrightarrow{b\ |\ bb}2,\ 1\xrightarrow{a\ |\ b}2,\ 1\xrightarrow{b\ |\ a}0,\ 2\xrightarrow{a\ |\ a}1,\ 2\xrightarrow{b\ |\ bbba}0$
