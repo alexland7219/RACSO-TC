@@ -428,3 +428,47 @@ main
 _Note: One DFA for each possible initial state_
 
 ### Exercise 14: Regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $4$ in the digraph with edges labelled with lengths whose set of nodes is $\\{0,1,2,3,4\\}$ and whose set of edges is $\\{0\xrightarrow{4}1,\ 1\xrightarrow{4}2,\ 1\xrightarrow{6}3,\ 2\xrightarrow{4}0,\ 2\xrightarrow{2}4,\ 3\xrightarrow{2}0,\ 4\xrightarrow{4}3\\}$
+
+Give a regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $4$ in the digraph with edges labelled with lengths that is represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-len1.png).
+
+```c++
+main
+{
+	DFA = "
+		a b c
+	0	M 1 M
+	1	M 2 3
+	2	4 0 M
+	3	0 M M
+	4	M 3 M +
+	M	M M M
+	";
+  
+  	output substitution(DFA, "a" -> "aa", "b" -> "aaaa", "c" -> "aaaaaa");
+}
+```
+
+_Note: Turn every lenght to a different symbol, then perform a substitution_
+
+### Exercise 15: Regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $5$ in the digraph with edges labelled with lengths whose set of nodes is $\\{0\xrightarrow{7}1,\ 0\xrightarrow{4}2,\  1\xrightarrow{7}1,\ 1\xrightarrow{9}3,\ 2\xrightarrow{4}4,\ 2\xrightarrow{3}5,\ 3\xrightarrow{4}0,\ 4\xrightarrow{5}2,\ 4\xrightarrow{3}3,\ 5\xrightarrow{9}4\\}$
+
+Give a regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $5$ in the digraph with edges labelled with lengths that is represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-len1.png).
+
+
+```c++
+main
+{
+	DFA = "
+		3 4 5 7 9
+	0	M 2 M 1 M
+	1	M M M 1 3
+	2	5 4 M M M 
+	3	M 0 M M M
+	4	3 M 2 M M
+	5	M M M M 4 +
+	M 	M M M M M
+	";
+  
+  	output substitution(DFA, "3" -> "aaa", "4" -> "aaaa", "5" -> "aaaaa", "7" -> "aaaaaaa", "9" -> "aaaaaaaaa");
+}
+```
