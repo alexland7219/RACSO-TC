@@ -27,3 +27,5 @@ main
   	output L1 | L2 | L3 | L4;
 }
 ```
+
+_Note: L1 is the language with aaa, L2 contains at least one bbb, L3 contains aba and L4 contains bab. The output is the union of all of these languages_
