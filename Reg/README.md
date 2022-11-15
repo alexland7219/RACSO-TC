@@ -452,7 +452,7 @@ _Note: Turn every lenght to a different symbol, then perform a substitution_
 
 ### Exercise 15: Regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $5$ in the digraph with edges labelled with lengths whose set of nodes is $\\{0\xrightarrow{7}1,\ 0\xrightarrow{4}2,\  1\xrightarrow{7}1,\ 1\xrightarrow{9}3,\ 2\xrightarrow{4}4,\ 2\xrightarrow{3}5,\ 3\xrightarrow{4}0,\ 4\xrightarrow{5}2,\ 4\xrightarrow{3}3,\ 5\xrightarrow{9}4\\}$
 
-Give a regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $5$ in the digraph with edges labelled with lengths that is represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-len1.png).
+Give a regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $5$ in the digraph with edges labelled with lengths that is represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-len2.png).
 
 
 ```c++
@@ -472,3 +472,5 @@ main
   	output substitution(DFA, "3" -> "aaa", "4" -> "aaaa", "5" -> "aaaaa", "7" -> "aaaaaaa", "9" -> "aaaaaaaaa");
 }
 ```
+
+### Exercise 16: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid |w|\_a\in\dot{2} \\}$ and $\sigma$ is the transducer with states $\\{0,1,2\\}$, initial state $0$, and transitions $0\xrightarrow{a\,|\,aba}1,\ 0\xrightarrow{b\,|\,bb}2,\ 1\xrightarrow{a\,|\,b}2,\ 1\xrightarrow{b\,|\,a}0,\ 2\xrightarrow{a\,|\,a}1,\ 2\xrightarrow{b\,|\,bbba}0$
