@@ -497,7 +497,7 @@ main
 
 _Note: First build the DFA for L, then take into account the state of the transducer and new symbols for the translation_
 
-### Exercise 16: Regular description for $\sigma(L)$ where $L=\\{ xay \in \\{a,b\\}^* \mid |y|=1 \\}$ and $\sigma$ is the transducer with states $\\{0,1\\}$, initial state $0$, and transitions $0\xrightarrow{a\ |\ aba}0,\ 0\xrightarrow{b\ |\ b}1,\ 1\xrightarrow{a\ |\ b}0,\ 1\xrightarrow{b\ |1\ aa}1$
+### Exercise 17: Regular description for $\sigma(L)$ where $L=\\{ xay \in \\{a,b\\}^* \mid |y|=1 \\}$ and $\sigma$ is the transducer with states $\\{0,1\\}$, initial state $0$, and transitions $0\xrightarrow{a\ |\ aba}0,\ 0\xrightarrow{b\ |\ b}1,\ 1\xrightarrow{a\ |\ b}0,\ 1\xrightarrow{b\ |1\ aa}1$
 
 Give a regular description for the image of the language $L=\\{ xay \in \\{a,b\\}^* \mid |y|=1 \\}$ through the transducer represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-transducer2.png).
 
@@ -522,4 +522,24 @@ main
 }
 ```
 
+### Exercise 18: Regular description for $\\{ \mathtt{intercal}(w_1,w_2) \mid w_1,w_2\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|\ \wedge\ \mathtt{value}_2(w_1)&gt;\mathtt{value}_2(w_2) \\}$, where $\mathtt{intercal}(a_1w_1,\ldots,a_nw_n)=a_1\ldots a_n\mathtt{intercal}(w_1,\ldots,w_n)$ and $\mathtt{intercal}(\lambda,\ldots,\lambda)=\lambda$
+
+Give a regular description for the set of words obtained by intercaling two words $w_1$, $w_2$ over $\\{0,1\\}$ with the same length and such that the natural number obtained by interpreting $w_1$ as a binary number, that is $\mathtt{value}_2(w_1)$, is bigger than $\mathtt{value}_2(w_2)$.
+
+```c++
+main
+{
+	DFA = "
+		0 1
+	I	A B
+	A	I M
+	B	Y I
+	Y	W W +
+	W	Y Y
+	M	M M
+	";
+  
+ 	output DFA;
+}
+```
 
