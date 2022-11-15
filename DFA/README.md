@@ -415,5 +415,5 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 | **M4** | M3 | M4 | |
 </div>
 
-_Note: Similar to <sub>Exercise 21</sub>, we have one state for every remainder modulus_ $5$
+_Note: Similar to <s>Exercise 21</s>, we have one state for every remainder modulus_ $5$
 
