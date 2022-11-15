@@ -376,7 +376,7 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 
 Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that interpreted in binary represent a natural number multiple of $4$ (in particular, the empty word represents $0$, which is multiple of $4$).
 
-<div align="center"
+<div align="center">
 
 | | 0 | 1 | |
 |---|---|---|---|
