@@ -329,3 +329,16 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that b
 | **1** | S | W | 1 | + |
 | **W** | W | W | W | |
 </div>
+
+### Exercise 20: Minimum DFA for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{2} \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that interpreted in binary represent a natural number multiple of $2$ (in particular, the empty word represents $0$, which is multiple of $2$).
+
+<div align="center">
+
+| | 0 | 1 | |
+| **Y** | Y | N | + |
+| **N** | Y | N | |
+</div>
+
+_Note: Now our alphabet is $\sigma=\\{0, 1\\}$ and words are binary numbers. In binary, multiples of $2$ are those that end in a $0$_
