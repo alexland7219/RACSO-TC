@@ -2,7 +2,7 @@
 
 ## _Exercises on Regular Operations_
 
-### Exercise 1: Regular description for $\\{ w \in \\{a,b\\}^* \mid |w|\_{aaa}&gt;0\;\vee\;|w|\_{bbb}&gt;0\;\vee\;|w|\_{aba}&gt;0\;\vee\;|w|\_\{bab\}&gt;0 \\}$
+### Exercise 1: Regular description for $\\{ w \in \\{a,b\\}^* \mid |w|\_{aaa}&gt;0\ \vee\ |w|\_{bbb}&gt;0\ \vee\ |w|\_{aba}&gt;0\ \vee\ |w|\_\{bab\}&gt;0 \\}$
 
 Give a regular description for the set of words over $\\{a, b\\}$ such there is at least one occurrence of $aaa$ or $bbb$ or $aba$ or $bab$.
 
