@@ -284,3 +284,14 @@ W -> SaS
 A -> SbSbS
 B -> SaSaS
 ```
+
+### Exercise 26: CFG for $\\{ w \in \\{a,b,c\\}^* \mid |w|_a+|w|_b=|w|_c \\}$
+
+Write a CFG generating the words over $\\{a, b, c\\}$ such that the number of occurrences of $a$ plus the number of occurrences of $b$ coincides with the number of occurrences of $c$.
+
+```py
+S -> aAa | aAb | aSc | bAa | bAb | bSc | cSa | cSb | cKc |
+A -> ScScS
+K -> SaSbS | SbSaS | SbSbS | SaSaS
+```
+
