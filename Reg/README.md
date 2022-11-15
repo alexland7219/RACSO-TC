@@ -474,3 +474,26 @@ main
 ```
 
 ### Exercise 16: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid |w|\_a\in\dot{2} \\}$ and $\sigma$ is the transducer with states $\\{0,1,2\\}$, initial state $0$, and transitions $0\xrightarrow{a\ |\ aba}1,\ 0\xrightarrow{b\ |\ bb}2,\ 1\xrightarrow{a\ |\ b}2,\ 1\xrightarrow{b\ |\ a}0,\ 2\xrightarrow{a\ |\ a}1,\ 2\xrightarrow{b\ |\ bbba}0$
+
+Give a regular description for the image of the language $L=\\{ w \in \\{a,b\\}^* \mid |w|\_a\in\dot{2} \\}$ through the transducer represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-transducer1.png). 
+
+```c++
+main
+{
+	DFA = "
+		a  b  c  d  e  f
+	P0	I1 P2 X  X  X  X +
+	I0	P1 I2 X  X  X  X
+	P1	X  X  I2 P0 X  X +
+	I1	X  X  P2 I0 X  X
+	P2	X  X  X  X  I1 P0 +
+	I2	X  X  X  X  P1 I0
+	X	X  X  X  X  X  X
+	";
+  
+  	output substitution(DFA, "a" -> "aba", "b" -> "bb", "c" -> "b", "d" -> "a", "e" -> "a", "f" -> "bbba");
+}
+```
+
+_Note: First build the DFA for L, then take into account the state of the transducer and new symbols for the translation_
+

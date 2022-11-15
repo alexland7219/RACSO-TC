@@ -373,7 +373,21 @@ Y -> bY |
 Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$, $y$ are words over $\\{a, b\\}$ such that the number of occurrences of $aba$ in $x$ is equal to the number of occurrences of $bab$ in $y$.
 
 ```py
-TOO HARD LMAOOOO
+S -> aA | bS | I
+A -> aA | bB | I
+B -> aC | bS | I
+
+C -> Ca | Db
+D -> Ea | Db
+E -> Ca | Fb
+
+F -> aF | bG | J
+G -> aD | bH | J
+H -> aF | bH | J
+
+I -> Ia | Jb | c
+J -> Ka | Jb | c
+K -> Ia | c
 ```
 
 ### Exercise 35: Non-ambiguous CFG for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge y^R \text\{ prefix of \} x \\}$
