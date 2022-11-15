@@ -386,3 +386,16 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 </div>
 
 _Note: In binary, multiples of_ $4$ _are those that end in two zeros. Furthermore we can suppose we start with two zeros in the beginning_
+
+### Exercise 24: Minimum DFA for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\notin\dot{4} \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that interpreted in binary represent a natural number which is not multiple of $4$ (in particular, the empty word represents $0$, which is multiple of $4$).
+
+<div align="center">
+
+| | 0 | 1 | |
+|---|---|---|---|
+| **Y** | Y | N | |
+| **N** | F | N | + |
+| **F** | Y | N | + |
+</div>
