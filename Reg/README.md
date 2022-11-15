@@ -497,3 +497,29 @@ main
 
 _Note: First build the DFA for L, then take into account the state of the transducer and new symbols for the translation_
 
+### Exercise 16: Regular description for $\sigma(L)$ where $L=\\{ xay \in \\{a,b\\}^* \mid |y|=1 \\}$ and $\sigma$ is the transducer with states $\\{0,1\\}$, initial state $0$, and transitions $0\xrightarrow{a\ |\ aba}0,\ 0\xrightarrow{b\ |\ b}1,\ 1\xrightarrow{a\ |\ b}0,\ 1\xrightarrow{b\ |1\ aa}1$
+
+Give a regular description for the image of the language $L=\\{ xay \in \\{a,b\\}^* \mid |y|=1 \\}$ through the transducer represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-transducer2.png).
+
+```c++
+main
+{
+	DFA = "
+		a  b  c  d
+	A0	B0 A1 X  X
+	A1	X  X  B0 A1
+	B0	C0 D1 X  X
+	B1	X  X  C0 D1
+	C0	C0 D1 X  X  +
+	C1	X  X  C0 D1 +
+	D0	B0 A1 X  X  +
+	D1	X  X  B0 A1 +
+	X	X  X  X  X
+	";
+  
+  	output substitution(DFA, "a" -> "aba", "c" -> "b", "d" -> "aa");
+  
+}
+```
+
+
