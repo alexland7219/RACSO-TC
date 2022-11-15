@@ -203,4 +203,15 @@ S -> aKa | bSb | a | b |
 K -> bNb | aKa | a |
 N -> bSb | b |
 ```
+### Exercise 18: Non-ambiguous CFG for $\\{ w \in \\{a,b\\}^* \mid w=w^R \wedge |w|_a&gt;0 \wedge |w|_b&gt;0 \\}$
 
+Write a **non-ambiguous** CFG generating the palindromic words over $\\{a, b\\}$ with some occurrence of $a$ and some occurrence of $b$.
+
+```py
+S -> aAa | bBb
+A -> aAa | bPb | b
+B -> bBb | aPa | a
+P -> aPa | bPb | a | b |
+```
+
+_Note: Notice how **P** generates all palindromic words. We reach **P** once we've read at least one a and at least one b_
