@@ -610,7 +610,7 @@ _Note: This is true if, and only if, there's an even number of a's_
 
 ### Exercise 38: Minimum DFA for $\\{ xy \in \\{a,b\\}^* \mid |x|_a=|y|_b \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that can be divided into two parts such that the number of $a$'s of the first part coincides with the number of $b$'s fo the second part.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that can be divided into two parts such that the number of $a$'s of the first part coincides with the number of $b$'s of the second part.
 
 <div align="center">
 
@@ -621,3 +621,13 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that can be
 
 _Note: This is always the case for any amount of a's and b's_
 
+### Exercise 39: Minimum DFA for $\\{ xy \in \\{a,b\\}^* \mid |x|_{aa}=|y|_b \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that can be divided into two parts such that the number of subwords $aa$ of the first part coincides with the number of $b$'s of the second part.
+
+<div align="center">
+
+| | a | b | |
+| **Y** | Y | Y | + |
+
+</div>
