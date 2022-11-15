@@ -337,6 +337,7 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 <div align="center">
 
 | | 0 | 1 | |
+|---|---|---|---|
 | **Y** | Y | N | + |
 | **N** | Y | N | |
 </div>
