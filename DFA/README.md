@@ -346,6 +346,8 @@ _Note: Now our alphabet is_ $\Sigma=\\{0, 1\\}$ _and words are binary numbers. I
 
 ### Exercise 21: Minimum DFA $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{3} \\}$
 
+Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that interpreted in binary represent a natural number multiple of $3$ (in particular, the empty word represents $0$, which is multiple of $3$).
+
 <div align="center">
 
 | | 0 | 1 | |
