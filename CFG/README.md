@@ -335,7 +335,7 @@ C -> aCC | bCC | c
 Q -> a | b | cQQ
 ```
 
-### Exercises 31: Non-ambiguous CFG for $\\{ w \in \\{a,b\\}^* \mid 2|w|_a=|w|_b \\}$
+### Exercise 31: Non-ambiguous CFG for $\\{ w \in \\{a,b\\}^* \mid 2|w|_a=|w|_b \\}$
 
 Write a **non-ambiguous** CFG generating the words over $\\{a,b\\}$ such that the number of occurrences of $b$ is twice as much as the number of occurrences of $a$.
 
@@ -344,5 +344,27 @@ S -> aBBS | bAS | bCBS |
 B -> b | aBBB
 A -> bC | bAA
 C -> a | bAC
+```
+
+### Exercise 32: Non-ambiguous CFG for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge |x|_a=|y|_b \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$,$y$ are words over $\\{a, b\\}$ such that the number of occurrences of $a$ in $x$ is equal to the number of occurrences of $b$ in $y$.
+
+```py
+S -> aSb | c | bSa | aSbA | BaSb | cA | Bc
+A -> aA | a
+B -> bB | b
+```
+
+### Exercise 33: Non-ambiguous CFG for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge |x|\_{ab}=|y|\_{ba} \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$, $y$ are words over $\\{a, b\\}$ such that the number of occurrences of $ab$ in $x$ is equal to the number of occurrences of $ba$ in $y$.
+
+```py
+S -> BabSbaA | BcA
+B -> bB | aX |
+X -> aX |
+A -> aA | bY |
+Y -> bY |
 ```
 
