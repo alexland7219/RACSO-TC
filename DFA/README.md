@@ -579,3 +579,17 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that t
 | **P** | W | P | + |
 | **W** | W | W | |
 </div>
+
+### Exercise 36: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x,y,z: (w=xyz \wedge |y|_b=3+|y|_a) \\}$
+
+Describe the minimum DFA that recognizes the set of words over $\\{a, b\\}$ that have some subword with three more $b$'s than $a$'s.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **0** | 0 | 1 | |
+| **1** | 0 | 2 | |
+| **2** | 1 | 3 | |
+| **3** | 3 | 3 | + |
+</div>
