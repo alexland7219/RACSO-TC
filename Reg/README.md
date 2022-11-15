@@ -31,3 +31,22 @@ main
 _Note: L1 is the language with aaa, L2 contains at least one bbb, L3 contains aba and L4 contains bab. The output is the union of all of these languages_
 
 ### Exercise 2: Regular description for $\\{ w \in \\{a,b\\}^* \mid |w|\_{aaa}&gt;0\ \wedge\ |w|\_{bbb}&gt;0\ \wedge\ |w|\_{aba}&gt;0\ \wedge\ |w|\_{bab}&gt;0 \\}$
+
+Give a regular description for the set of words over $\\{a, b\\}$ such there is at least one occurrence of $aaa$ and of $bbb$ and of $aba$ and of $bab$.
+
+```c++
+main
+{
+	a = "a";
+  	b = "b";
+  	ab = a | b;
+	
+	L1 = ab* "aaa" ab*;
+  	L2 = ab* "bbb" ab*;
+  	L3 = ab* "aba" ab*;
+  	L4 = ab* "bab" ab*;
+  
+  	output L1 & L2 & L3 & L4;
+}
+```
+
