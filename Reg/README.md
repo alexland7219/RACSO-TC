@@ -290,3 +290,36 @@ main
 
 _Note: By replacing the variables a and b we implicitly do a substitution_
 
+### Exercise 10: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b,c\\}^* \mid \exists x,y: ((w=xay\ \vee\ w=xcy)\ \wedge\ |y|=1) \\}$ and $\sigma$ is the morphism defined by $\sigma(a)=aba$, $\sigma(b)=aa$ and $\sigma(c)=b$
+
+Give a regular description for the image of the set of words over $\\{a, b, c\\}$, with either an $a$ or a $c$ in the second position starting from the end, through the morphism $\sigma$ defined by $\sigma(a)=aba$, $\sigma(b)=aa$ and $\sigma(c)=b$.
+
+```c++
+main
+{
+	a = "aba";
+  	b = "aa";
+  	c = "b";
+  
+  	abc = a | b | c;
+  	ac  = a | c;
+  
+  	output abc* ac abc;
+}
+```
+
+### Exercise 11: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid \exists x,y: (w=xay\ \wedge\ |y|=2) \\}$ and $\sigma$ is the substitution defined by $\sigma(a)=\\{aa\\}*$ and $\sigma(b)=\\{a,aba,bab\\}$
+
+Give a regular description for the image of the set of words over $\\{a, b\\}$, with an $a$ in the third position starting from the end, through the substitution $\sigma$ defined by $\sigma(a)=\\{aa\\}*$ and $\sigma(b)=\\{a,aba,bab\\}$.
+
+```c++
+main
+{
+	a = "aa"*;
+  	b = "a" | "aba" | "bab";
+  
+  	ab = a | b;
+  
+  	output ab* a ab ab;
+}
+```
