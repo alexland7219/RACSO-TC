@@ -1,5 +1,11 @@
 # Regular Operations
 
+## _Basic format for describing Regular languages_
+
+The description is given in the <u>main</u> function. You can assign variables to languages, do operations such as the Union (|), Intersection (&), Kleene Star (*), and Concatenation (by leaving a space between languages).
+
+One can define a language with Strings, or even DFA's following the format in Unit 1.
+
 ## _Exercises on Regular Operations_
 
 ### Exercise 1: Regular description for $\\{ w \in \\{a,b\\}^* \mid |w|\_{aaa}&gt;0\ \vee\ |w|\_{bbb}&gt;0\ \vee\ |w|\_{aba}&gt;0\ \vee\ |w|\_\{bab\}&gt;0 \\}$
