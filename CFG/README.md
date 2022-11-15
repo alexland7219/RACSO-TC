@@ -440,3 +440,16 @@ S -> aXb | bXa | aSa | bSb
 X -> aX | bX |
 ```
 
+### Exercise 41: CFG for the complement of $\\{ a^n b^n c^n \mid n\geq 0 \\}$
+
+Write a CFG (**which will be ambiguous**) generating the language of the words over $\\{a,b,c\\}$ that are not of the form $a^n b^n c^n$, where $n \ge 0$.
+
+```py
+S -> XbaX | XcaX | XcbX | N | PC
+X -> aX | bX | cX |
+N -> aNc | aXb | bXc | A | cC
+P -> aPb | A | B
+A -> aA | a
+B -> bB | b
+C -> cC | c |
+```
