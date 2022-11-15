@@ -3,18 +3,18 @@
 
 We describe this format by means of an example. Consider the following grammar:
 
-```haskell
-S -> aSb |
+```py
+S -> aSb
 S -> 
 ```
 This grammar has a single non-terminal symbol S, two terminal symbols a and b, and two productions: the first one rewrites S into the word aSb, and the second one into the empty word. It is easy to see that the grammar generates the language $\\{a^n b^n \mid n \ge 0\\}$. Since both productions have the same left-hand side, they could be written in a single line like this:
 
-```java
+```py
 S -> aSb |
 ```
 
 It is also possible to introduce more non-terminals, if this is considered necessary or convenient. For instance, the following grammar is equivalent to the previous example:
-```python
+```py
 S -> aXb |
 X -> aSb |
 ```
@@ -25,6 +25,15 @@ We now give a more precise definition of the format. Grammars are described by a
 ### Exercise 1: Non-ambiguous CFG for $\\{ a^n b^n \mid n\geq 0 \\}$
 
 Write a **non-ambiguous** CFG generating the language over $\\{a, b\\}$ where the first half of each word only contains $a$'s and the second half only contains $b$'s.
-```lua
+```py
 S -> aSb |
+```
+
+### Exercise 2: Non-ambiguous CFG for $\\{ a^n c b^n \mid n&gt;0 \\}$
+
+Write a **non-ambiguous** CFG generating the language over $\\{a, b\\}$ such that there is an occurrence of $c$ exactly in the middle, to its left there are only $a$'s (and there is at least one $a$), and to its right there are only $b$'s (and there is at least one $b$). Note that, since the only occurrence of $c$ must be exactly in the middle, the number of $a$'s must be equal to the number of $b$'s.
+
+```py
+S -> aKb 
+K -> aKb | c
 ```
