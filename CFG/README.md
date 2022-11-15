@@ -132,4 +132,23 @@ T -> aTb |
 Q -> bQc |
 ```
 
-_Note: Notice how symbols **T** and **Q** recognize_ $\\{a^x b^x\\}$ _and_ $\\{b^x c^x\\}$ _respectively_ 
+_Note: Notice how symbols **T** and **Q** recognize_ $\\{a^x b^x\\}$ _and_ $\\{b^x c^x\\}$ _respectively_
+
+### Exercise 12: CFG for $\\{ a^i b^j c^k \mid i=j \vee j=k \vee i=k \\}$
+
+```py
+S -> H | F | Z
+
+H -> XC
+F -> AY
+Z -> aZc | B
+
+A -> Aa |
+B -> Bb |
+C -> Cc |
+
+X -> aXb |
+Y -> bYc |
+```
+
+_Note: **H** will recognize those with_ $i = j$ _followed by a number of c's we don't care about. Same thing for case **F** recognizing the case_ $j=k$ _. Case **Z** is the last one, and we need to take care of the b's left inside the word._
