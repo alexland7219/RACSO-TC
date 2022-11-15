@@ -244,3 +244,19 @@ Write a CFG generating the language of the well-paranthesized words over $\\{ [ 
 ```py
 S -> S(S)S | S[S]S |
 ```
+
+### Exercise 22: Non-ambiguous CFG for the well-parenthesized words over $\\{ ( , ) \\}$
+
+Write a **non-ambiguous** CFG generating the language of the well-parenthesized words over $\\{ ( , ) \\}$. For example, $()(())$ and $(((()())))$ are well-parenthesized words, whereas $)($ and $(()$ are not. One way to define more precisely this language is to describe it as the set of words that can be reduced to the empty word by successive applications of the rewrite rule $()\to\lambda$.
+
+```py
+S -> (S)S |
+```
+
+### Exercise 23: Non-ambiguous CFG for the well-parenthesized words over $\\{ [ , ] , ( , ) \\}$
+
+Write a **non-ambiguous** CFG generating the language of the well-paranthesized words over $\\{ [ , ] , ( , ) \\}$. For example, $()[()]$ and $[[(()[])]]$ are well-paranthesized words, whereas $][$ and $(()$ are not. One way to define more precisely this language is to describe it as the set of words that can be reduced to the empty word by successive applications of the rewrite rules $()\to\lambda$ and $[]\to\lambda$.
+
+```py
+S -> (S)S | [S]S |
+```
