@@ -34,6 +34,7 @@ and the rows are indexed by states.
 
 ## _RACSO exercises on DFAs_
 
+### 🐢 EASY 🐢
 ### Exercise 1: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2} \\}$
 
 Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ which have an even number of $a$'s.
@@ -48,6 +49,7 @@ Describe the minimum DFA that recognizes the language of the words over $\\{a, b
 
 _Note: E for 'even' and O for 'odd'._
 
+### 🐢 EASY 🐢
 ### Exercise 2: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2}\wedge |w|_b\in\dot{2} \\}$ 
 
 Describe the minimum DFA that recognizes the language of words over $\\{a, b\\}$ with an even number of $a$'s, and an even number of $b$'s.
