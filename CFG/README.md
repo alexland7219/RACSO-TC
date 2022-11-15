@@ -8,9 +8,12 @@ S -> aSb
 S -> 
 ```
 This grammar has a single non-terminal symbol S, two terminal symbols a and b, and two productions: the first one rewrites S into the word aSb, and the second one into the empty word. It is easy to see that the grammar generates the language $\\{a^n b^n \mid n \ge 0\\}$. Since both productions have the same left-hand side, they could be written in a single line like this:
+
+<div align="center">
 ```
 S -> aSb |
 ```
+</div>
 It is also possible to introduce more non-terminals, if this is considered necessary or convenient. For instance, the following grammar is equivalent to the previous example:
 ```
 S -> aXb |
