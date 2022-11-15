@@ -136,6 +136,8 @@ _Note: Notice how symbols **T** and **Q** recognize_ $\\{a^x b^x\\}$ _and_ $\\{b
 
 ### Exercise 12: CFG for $\\{ a^i b^j c^k \mid i=j \vee j=k \vee i=k \\}$
 
+Write a CFG (**which will be ambiguous**) generating the words of the form $a^i b^j c^k$ where the number of $a$'s equals the number of $b$'s, or the number of $b$'s equals the number of $c$'s, or the number of $c$'s equals the number of $a$'s.
+
 ```py
 S -> H | F | Z
 
