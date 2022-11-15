@@ -368,3 +368,10 @@ A -> aA | bY |
 Y -> bY |
 ```
 
+### Exercise 34: Non-ambiguous CFG for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge |x|\_{aba}=|y|\_{bab} \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$, $y$ are words over $\\{a, b\\}$ such that the number of occurrences of $aba$ in $x$ is equal to the number of occurrences of $bab$ in $y$.
+
+```py
+TOO HARD LMAOOOO
+```
