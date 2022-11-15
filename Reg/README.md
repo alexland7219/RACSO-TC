@@ -50,3 +50,39 @@ main
 }
 ```
 
+### Exercise 3: Regular description for $\\{ w \in \\{a,b\\}^* \mid |w|_\{aaa\}=|w|\_\{bbb\}=1 \\}$
+
+Give a regular description for the set of words over $\\{a, b\\}$ such there is exactly one ocurrence of $aaa$ and of $bbb$.
+
+```c++
+main
+{
+
+  	oneAAA = "
+			a  b 
+		I	A  I 
+		A	AA I
+		AA	Y  I 
+		Y	M  N +
+		M	M  M
+		N	T  N +
+		T	TT N +
+		TT	M  N +
+	";
+  
+    	oneBBB = "
+			a  b 
+		I	I  A 
+		A	I  AA
+		AA	I  Y 
+		Y	N  M +
+		M	M  M
+		N	N  T +
+		T	N  TT +
+		TT	N  M +
+	";
+
+  
+	output oneAAA & oneBBB ; 
+}
+```
