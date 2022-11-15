@@ -230,3 +230,9 @@ P -> a | bPb | aPa | b |
 ### Exercise 20: CFG for the well-parenthesized words over $\\{ ( , ) \\}$
 
 Write a CFG generating the language of the well-parenthesized words over $\\{ ( , ) \\}$. For example, $()(())$ and $(((()())))$ are well-parenthesized words, whereas $)($ and $(()$ are not. One way to define more precisely this language is to describe it as the set of words that can be reduced to the empty word by successive applications of the rewrite rule $()\to\lambda$.
+
+```py
+S -> S(S)S |
+```
+
+_Note: Notice how anything inside a parenthesis must be well-parenthesized, and same-level parenthesis can be concatenated._
