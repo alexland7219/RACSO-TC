@@ -98,3 +98,15 @@ Write a **non-ambiguous** CFG generating the words of the form $a^i b^j$ where t
 S -> aaSb | T
 T -> aTb |
 ```
+
+### Exercise 9: Non-ambiguous CFG for $\\{ a^i b^j \mid i\geq j \vee i\leq 2j \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $a^i b^j$ where the number of $a$'s is at least the number of $b$'s, or it is at most twice the number of $b$'s.
+
+```py
+S -> aSb | aA | Bb |
+A -> aA |
+B -> Bb |
+```
+
+_Note: Notice how_ $(i \ge j \vee i \leq 2j)$ _is always be true. Furthermore if we reach a point where there are for example only a's remaining, in order to avoid ambiguity with the empty word, we need that **aA**_
