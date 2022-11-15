@@ -564,3 +564,18 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ which have 
 </div>
 
 _Note: If there's any occurrence of a, then the word will never be accepted_
+
+### Exercise 35: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{aba}+1=|w|_a \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that the number of occurrences of $aba$ is one less than the number of occurrences of $a$.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | A | S | |
+| **A** | W | B | + |
+| **B** | A | P | + |
+| **P** | W | P | + |
+| **W** | W | W | |
+</div>
