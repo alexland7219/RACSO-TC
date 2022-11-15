@@ -467,3 +467,5 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ whose suffi
 | **P** | J | K | |
 | **W** | W | W | |
 </div>
+
+_Note: This language is the reverse of the language recognized by the previous language. It is recommended to reverse the DFA and then minimize the reversed language. It can be a tedious process._
