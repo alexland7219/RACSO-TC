@@ -436,3 +436,17 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that e
 </div>
 
 _Note: Once we read two consecutives b's (state **BB**), any other word following will instantly create a subword without two a's._
+
+### Exercise 27: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: ((w=xy \wedge |x|\notin\dot{2})\Rightarrow |x|_b=1+|x|_a) \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ whose prefixes of odd length have the property that their number of $b$'s equals their number of $a$'s plus $1$.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | W | I | + |
+| **I** | S | B | + |
+| **B** | S | W | + |
+| **W** | W | W | |
+</div>
