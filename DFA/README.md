@@ -278,3 +278,23 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not
 | **B** | S | W | + |
 | **W** | W | W | |
 </div>
+
+### Exercise 17: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{aba}=0 \wedge |w|_{bab}=0 \wedge \exists x: w=xaaa \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in _aaa_, and do not contain _aba_ or _bab_.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | A | B | |
+| **A** | C | D | |
+| **B** | F | B | |
+| **C** | G | D | |
+| **D** | W | B | |
+| **F** | C | W | |
+| **G** | G | D | + |
+| **W** | W | W | |
+</div>
+
+
