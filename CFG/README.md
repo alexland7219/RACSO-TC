@@ -171,3 +171,9 @@ _Note: From the beginning we can take two options. Either forget about the right
 ### Exercise 14: Non-ambiguous CFG for $\\{ a^\{n_0\} b a^\{n_1\} b \ldots a^\{n_\{m-1\}\} b a^\{n_m\} \mid m\geq 1 \wedge (n_0 = \sum_\{1\leq i\leq m\} n_i) \\}$
 
 Write a **non-ambiguous** CFG generating the words of the form $a^\{n_0\}ba^\{n_1\}b\ldots a^\{n_\{m-1\}\} b a^\{n_m\}$, with $m \ge 1$, such that $n_0$ is equal to the sum $n_1 + n_2 + \ldots + n_m$.
+
+```py
+S -> aSa | Sb | b
+```
+
+### Exercise 15: CFG for $\\{ a^\{n_0\} b a^\{n_1\} b \ldots a^\{n_\{m-1\}\} b a^\{n_m\} \mid m\geq 1 \wedge \exists I\subseteq\\{1,\ldots,m\\}: (n_0 = \sum_\{i\in I\} n_i) \\}$
