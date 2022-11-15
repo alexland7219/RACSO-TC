@@ -415,5 +415,24 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 | **M4** | M3 | M4 | |
 </div>
 
-_Note: Similar to <s>Exercise 21</s>, we have one state for every remainder modulus_ $5$
+_Note: Similar to <u>Exercise 21</u>, we have one state for every remainder modulus_ $5$
 
+### Exercise 26: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y,z: ((w=xyz \wedge |y|=3) \Rightarrow |y|_a=2) \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that every subword of length $3$ has exactly two $a$'s.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | A | B | + |
+| **A** | AA | AB | + |
+| **B** | BA | BB | + |
+| **AA**| W | AB | + |
+| **AB**| BA | W | + |
+| **BA** | AA | W | + |
+| **BB** | W | W | + |
+| **W** | W | W | |
+</div>
+
+_Note: Once we read two consecutives b's (state **BB**), any other word following will instantly create a subword without two a's._
