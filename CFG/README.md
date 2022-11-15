@@ -154,3 +154,7 @@ Y -> bYc |
 ```
 
 _Note: **H** will recognize those with_ $i = j$ _followed by a number of c's we don't care about. Same thing for case **F** recognizing the case_ $j=k$ _. Case **Z** is the last one, and we need to take care of the b's left inside the word._
+
+### Exercise 13: CFG for $\\{ a^{n_0} b a^{n_1} b \ldots a^{n_{m-1}} b a^{n_m} \mid m\geq 1 \wedge \exists i\in\\{1,\ldots,m\\}: (n_0 = n_i) \\}$
+
+Write a CFG (**which will be ambiguous**) generating the words of the form $a^\{n_0\}ba^\{n_1\}b\ldots a^\{n_\{m-1\}\} b a^\{n_m\}$ for which there exists an $i\in\\{1,\ldots,m\\}$ such that ${n_0}={n_i}$.
