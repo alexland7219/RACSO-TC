@@ -324,7 +324,7 @@ main
 }
 ```
 
-### Exercise 12: Regular description for the language recognized by the NFA with set of states $\\{0,1,2,3,4,5\\}$, initial state $0$, accepting state $4$, and transitions $\delta(0,a)=\\{1,3\\},\;\delta(0,b)=4, \delta(1,a)=4, \delta(1,b)=\\{2,3\\}, \delta(2,b)=5, \delta(3,a)=2, \delta(4,a) = \\{0,5\\}, \delta(4,b)=\\{0,2\\}, \delta(5,a)=4$
+### Exercise 12: Regular description for the language recognized by the NFA with set of states $\\{0,1,2,3,4,5\\}$, initial state $0$, accepting state $4$, and transitions $\delta(0,a)=\\{1,3\\}$, $\delta(0,b)=4$, $\delta(1,a)=4$, $\delta(1,b)=\\{2,3\\}$, $\delta(2,b)=5$, $\delta(3,a)=2$, $\delta(4,a) = \\{0,5\\}$, $\delta(4,b)=\\{0,2\\}$, $\delta(5,a)=4$
 
 Give a regular description for the language recognized by the NFA represented here:
 
