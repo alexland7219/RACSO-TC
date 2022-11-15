@@ -26,8 +26,8 @@ The previous DFA can be described with the basic format as follows:
 </div>
 
 
-Note that the alphabet symbols are _a_ and _b_, and the states are _q0_ and _q1_. Moreover, _q1_ is
-an accepting state since it is marked with +, and _q0_ is implicitly assumed to be the starting
+Note that the alphabet symbols are $a$ and $b$, and the states are $q0$ and $q1$. Moreover, $q1$ is
+an accepting state since it is marked with +, and $q0$ is implicitly assumed to be the starting
 state since it is the first one to appear. Finally, note that this format is roughly equivalent
 to the automaton’s transition matrix, where the columns are indexed by alphabet symbols
 and the rows are indexed by states.
@@ -36,7 +36,7 @@ and the rows are indexed by states.
 
 ### Exercise 1: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2} \\}$
 
-Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ which have an even number of _a_'s.
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ which have an even number of $a$'s.
 
 <div align="center">
 
@@ -50,7 +50,7 @@ _Note: E for 'even' and O for 'odd'._
 
 ### Exercise 2: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\in\dot{2}\wedge |w|_b\in\dot{2} \\}$ 
 
-Describe the minimum DFA that recognizes the language of words over $\\{a, b\\}$ with an even number of _a_'s, and an even number of _b_'s.
+Describe the minimum DFA that recognizes the language of words over $\\{a, b\\}$ with an even number of $a$'s, and an even number of $b$'s.
 
 <div align="center">
 
@@ -64,7 +64,7 @@ Describe the minimum DFA that recognizes the language of words over $\\{a, b\\}$
 
 ### Exercise 3: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_a\notin\dot{2}\vee |w|_b\notin\dot{2} \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ with an odd number of _a_'s or an odd number of _b_'s.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ with an odd number of $a$'s or an odd number of $b$'s.
 <div align="center">
 
 |  | a | b |  |
@@ -80,7 +80,7 @@ This is exactly why languages recognized by DFAs, regular languages, are closed 
 
 ### Exercise 4: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x: w=xa \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in _a_.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in $a$.
 
 <div align="center">
 
@@ -92,7 +92,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in
 
 ### Exercise 5: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x: w=xbba \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with _bba_.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with $bba$.
 
 <div align="center">
 
@@ -106,7 +106,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with
 
 ### Exercise 6: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x: w=xbabab \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with _babab_.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ ending with $babab$.
 
 <div align="center">
 
@@ -124,7 +124,7 @@ _Note: Always ask yourself in which state we end up if the word breaks the seque
 
 ### Exercise 7: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \exists x,y: (w=xaby \wedge |y|=1) \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that the symbol _a_ appears in the third from the last position, and the symbol _b_ appears in the penultimate position.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that the symbol $a$ appears in the third from the last position, and the symbol $b$ appears in the penultimate position.
 
 <div align="center">
 
@@ -139,7 +139,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that t
 
 ### Exercise 8: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: (w=xay \Rightarrow |x|_b\in\dot{2}) \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that to the left of each occurrence of _a_ there is an even number of _b_'s.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that to the left of each occurrence of $a$ there is an even number of $b$'s.
 
 <div align="center">
 
@@ -154,7 +154,7 @@ _Note: This is our first introduction to our "**W**ell" state. We start reading 
 
 ### Exercise 9: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: (w=xay \Rightarrow |y|_b\in\dot{2}) \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that to the right of each occurrence of _a_ there is an even number of _b_'s.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that to the right of each occurrence of $a$ there is an even number of $b$'s.
 
 <div align="center">
 
@@ -168,7 +168,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that t
 
 ### Exercise 10: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: ( (w=xy \wedge |x|\geq 3) \Rightarrow (|x|_a\in\dot{2}\vee |x|_b\in\dot{2}) ) \\}$
 
-Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ such that every prefix of length greater than or equal to $3$ has an even number of _a_'s or an even number of _b_'s.
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ such that every prefix of length greater than or equal to $3$ has an even number of $a$'s or an even number of $b$'s.
 
 <div align="center">
 
@@ -186,7 +186,7 @@ Describe the minimum DFA that recognizes the language of the words over $\\{a, b
 
 ### Exercise 11: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y: ( (w=xy \wedge |x|\geq 3) \Rightarrow (|x|_a\in\dot{2}\vee |x|_b\notin\dot{2}) ) \\}$
 
-Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ such that every prefix of length greater than or equal to $3$ has an even number of _a_'s or an odd number of _b_'s.
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ such that every prefix of length greater than or equal to $3$ has an even number of $a$'s or an odd number of $b$'s.
 
 <div align="center">
 
@@ -202,7 +202,7 @@ Describe the minimum DFA that recognizes the language of the words over $\\{a, b
 
 ### Exercise 12: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y,z: ( (w=xyz \wedge |y|=3) \Rightarrow (|y|_a\in\dot{2} \vee |y|_b\notin\dot{2}) ) \\}$
 
-Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ whose subwords of length $3$ have an even number of _a_'s or an odd number of _b_'s.
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ whose subwords of length $3$ have an even number of $a$'s or an odd number of $b$'s.
 
 <div align="center">
 
@@ -222,7 +222,7 @@ _Note: This exercise follows the trend of the previous ones. Now we have to keep
 
 ### Exercise 13: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x,y,z: ( (w=xyz \wedge |y|=3) \Rightarrow (|y|_a\in\dot{2} \vee |y|_b\in\dot{2}) ) \\}$
   
-Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ whose subwords of length $3$ have an even number of _a_'s or an even number of _b_'s.
+Describe the minimum DFA that recognizes the language of the words over $\\{a, b\\}$ whose subwords of length $3$ have an even number of $a$'s or an even number of $b$'s.
 
 <div align="center">
 
@@ -235,7 +235,7 @@ _Note: If you really think about it, any word of length 3 over \{a, b\} will alw
 
 ### Exercise 14: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall x: (w=bbx \Rightarrow |x|_{aa}=0) \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that, if they start with _bb_, then they do not contain _aa_.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that, if they start with $bb$, then they do not contain $aa$.
 
 <div align="center">
 
@@ -253,7 +253,7 @@ _Note: In this case we combine a **W**ell with a special state, we will call the
 
 ### Exercise 15: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{bbb}=0 \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not contain the subword _bbb_.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not contain the subword $bbb$.
 
 <div align="center">
 
@@ -267,7 +267,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not
 
 ### Exercise 16: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{bab}=0 \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not contain the subword _bab_.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not contain the subword $bab$.
 
 <div align="center">
 
@@ -281,7 +281,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that do not
 
 ### Exercise 17: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|\_{aba}=0 \wedge |w|\_{bab}=0 \wedge \exists x: w=xaaa \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in _aaa_, and do not contain _aba_ or _bab_.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in $aaa$, and do not contain $aba$ or $bab$.
 
 <div align="center">
 
@@ -299,7 +299,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in
 
 ### Exercise 18: Minimum DFA for $\\{ w \in \\{a,b,c\\}^* \mid |w|_{abc}\leq 1 \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that have at most one occurrence of the subword _abc_.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that have at most one occurrence of the subword $abc$.
 
 <div align="center">
 
