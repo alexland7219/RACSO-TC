@@ -326,4 +326,44 @@ main
 
 ### Exercise 12: Regular description for the language recognized by the NFA with set of states $\\{0,1,2,3,4,5\\}$, initial state $0$, accepting state $4$, and transitions $\delta(0,a)=\\{1,3\\}$, $\delta(0,b)=4$, $\delta(1,a)=4$, $\delta(1,b)=\\{2,3\\}$, $\delta(2,b)=5$, $\delta(3,a)=2$, $\delta(4,a) = \\{0,5\\}$, $\delta(4,b)=\\{0,2\\}$, $\delta(5,a)=4$
 
-Give a regular description for the language recognized by the NFA represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-nfa1.png);
+Give a regular description for the language recognized by the NFA represented [here](https://racso.lsi.upc.edu/juezwsgi/pics/exercise-nfa1.png).
+
+```c++
+main
+{
+ 	DFA = " 	a	b
+    1	24	5
+    0	0	0
+    3	0	6
+    13	24	56
+    24	35	34
+    34	3	6
+    134	234	56
+    234	35	346
+    5	16	13 +
+    35	16	136 +
+    135	1246	1356 +
+    245	1356	134 +
+    345	136	136 +
+    1345	12346	1356 +
+    2345	1356	1346 +
+    6	5	0
+    16	245	5
+    136	245	56
+    1246	2345	345
+    346	35	6
+    1346	2345	56
+    12346	2345	3456
+    56	156	13 +
+    156	12456	135 +
+    1356	12456	1356 +
+    12456	123456	1345 +
+    3456	1356	136 +
+    13456	123456	1356 +
+    123456	123456	13456 +";
+  
+  output DFA;
+}
+```
+
+_Note: This is the solution (really) if we were to convert the NFA to a DFA_
