@@ -215,3 +215,18 @@ P -> aPa | bPb | a | b |
 ```
 
 _Note: Notice how **P** generates all palindromic words. We reach **P** once we've read at least one a and at least one b_
+
+### Exercise 19: Non-ambiguous CFG for $\\{ w \in \\{a,b\\}^* \mid w=w^R \wedge |w|_\{aba\}&gt;0 \\}$
+
+Write a **non-ambiguous** CFG generating the palindromic words over $\\{a, b\\}$ with some occurrence of $aba$.
+
+```py
+S -> aAa | bSb
+A -> b | bBb | aAa
+B -> a | bSb | aPa
+P -> a | bPb | aPa | b |
+```
+
+### Exercise 20: CFG for the well-parenthesized words over $\\{ ( , ) \\}$
+
+Write a CFG generating the language of the well-parenthesized words over $\\{ ( , ) \\}$. For example, $()(())$ and $(((()())))$ are well-parenthesized words, whereas $)($ and $(()$ are not. One way to define more precisely this language is to describe it as the set of words that can be reduced to the empty word by successive applications of the rewrite rule $()\to\lambda$.
