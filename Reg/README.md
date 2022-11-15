@@ -367,4 +367,22 @@ main
 }
 ```
 
-_Note: This is the solution (really) if we were to convert the NFA to a DFA_
+_Note: This is the solution (yes really) if we were to convert the NFA to a DFA. A better solution of course would be to just make up new symbols for repeated transitions:_
+
+```c++
+main 
+{
+    DFA = "
+            a c b d
+        0   1 3 4 4
+        1   4 4 2 3
+        2   X X 5 5
+        3   2 2 X X
+        4   0 5 2 0 +
+        5   4 4 X X
+        X   X X X X
+    ";
+
+    output substitution(DFA, "c"->"a", "d"->"b");
+}
+```
