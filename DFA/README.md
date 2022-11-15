@@ -342,4 +342,4 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 | **N** | Y | N | |
 </div>
 
-_Note: Now our alphabet is_ $\Sigma=\\{0, 1\\}$ _and words are binary numbers. In binary, multiples of _$2$_ are those that end in a _$0$
+_Note: Now our alphabet is_ $\Sigma=\\{0, 1\\}$ _and words are binary numbers. In binary, multiples of_ $2$ _are those that end in a_ $0$
