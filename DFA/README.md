@@ -450,3 +450,20 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ whose prefi
 | **B** | I | W | + |
 | **W** | W | W | |
 </div>
+
+### Exercise 28: Minimum DFA for $\\{ w \in \\{a,bº\}^* \mid \forall x,y: ((w=xy \wedge |y|\notin\dot{2}) \Rightarrow |y|_b=1+|y|_a) \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ whose suffixes of odd length have the property that their number of $b$'s equals their number of $a$'s plus $1$.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | A | B | + |
+| **A** | J | B | |
+| **B** | A | K | + |
+| **J** | W | P | |
+| **K** | P | W | + |
+| **P** | J | K | |
+| **W** | W | W | |
+</div>
