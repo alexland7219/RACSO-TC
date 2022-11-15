@@ -468,4 +468,26 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ whose suffi
 | **W** | W | W | |
 </div>
 
-_Note: This language is the reverse of the language recognized by the previous language. It is recommended to reverse the DFA and then minimize the reversed language. It can be a tedious process._
+_Note: This language is the reverse of the language recognized by the previous language. It is recommended to reverse the DFA, determinize the NFA and then minimize the reversed DFA. It can be a tedious process._
+
+### Exercise 29: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall y: ((|y|=2 \wedge |y|_b&gt;0) \Rightarrow |w|_y&gt;0) \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that contain all possible subwords of length $2$ with at least one $b$. Note that there are only three of such subwords ($ab$, $ba$, $bb$), but they might be overlapped.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | 1 | 6 | |
+| **1** | 1 | 2 | |
+| **2** | 3 | 4 | |
+| **3** | 3 | 5 | |
+| **4** | Y | 4 | |
+| **5** | 3 | Y | |
+| **6** | 3 | 7 | |
+| **7** | 8 | 7 | |
+| **8** | 8 | Y | |
+| **Y** | Y | Y | + |
+</div>
+
+</div>
