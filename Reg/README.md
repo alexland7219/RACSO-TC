@@ -57,8 +57,7 @@ Give a regular description for the set of words over $\\{a, b\\}$ such there is 
 ```c++
 main
 {
-
-  	oneAAA = "
+    oneAAA = "
 			a  b 
 		I	A  I 
 		A	AA I
@@ -66,8 +65,7 @@ main
 		Y	M  N +
 		M	M  M
 		N	T  N +
-		T	TT N +
-		TT	M  N +
+		T	Y N +
 	";
   
     	oneBBB = "
@@ -78,11 +76,56 @@ main
 		Y	N  M +
 		M	M  M
 		N	N  T +
-		T	N  TT +
-		TT	N  M +
+		T	N  Y +
 	";
+ 
+	output oneAAA & oneBBB ; 
+}
+```
 
+_Note: This is the naive method. Intersection of two DFAs_
+
+
+```c++
+main
+{
+  	oneAAA = "
+			a  b 
+		I	A  I 
+		A	AA I
+		AA	Y  I 
+		Y	M  N +
+		M	M  M
+		N	T  N +
+		T	Y N +
+	";
+ 
+  	oneBBB = substitution(oneAAA, "a"->"b", "b"->"a");
   
 	output oneAAA & oneBBB ; 
 }
 ```
+
+_Note: This is the second method (and the easiest). Substitute a's for b's and just create one DFA._
+
+
+```c++
+main
+{
+	a = "a";
+  	b = "b";
+  	L = "";
+  
+  	Y = ( b | a b | a a b )* a a a ( b ( b | a b ) * a a ) *;
+  
+  	reg1 = Y ( L | b ( b | a b ) * ( L | a ) );
+  	reg2 = substitution(reg1, "a"->"b", "b"->"a");
+  
+  	output reg1 & reg2;
+}
+```
+
+_Note: This is without DFAs after converting oneAAA to a Regular expression by hand_
+
+
+### Exercise 4: Regular description for 
