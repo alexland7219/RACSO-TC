@@ -194,3 +194,13 @@ Write a **non-ambiguous** CFG generating the palindromic words over $\\{a, b\\}$
 ```py
 S -> aSa | bSb | a | b |
 ```
+### Exercise 17: Non-ambiguous CFG for $\\{ w \in \\{a,b\\}^* \mid w=w^R \wedge |w|_\{aba\}=0 \\}$
+
+Write a **non-ambiguous** CFG generating the palindromic words over $\\{a, b\\}$ with no occurrence of $aba$.
+
+```py
+S -> aKa | bSb | a | b |
+K -> bNb | aKa | a |
+N -> bSb | b |
+```
+
