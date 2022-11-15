@@ -593,3 +593,17 @@ Describe the minimum DFA that recognizes the set of words over $\\{a, b\\}$ that
 | **2** | 1 | 3 | |
 | **3** | 3 | 3 | + |
 </div>
+
+### Exercise 37: Minimum DFA for $\\{ xy \in \\{a,b\\}^* \mid |x|_a=|y|_a \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that can be divided into two parts that contain the same amount of $a$'s.
+
+<div align="center">
+
+|  | a | b |  |
+|---|---|---|---|
+| **E** | O | E | + |
+| **O** | E | O | |
+</div>
+
+_Note: This is true if, and only if, there's an even number of a's_
