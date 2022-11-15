@@ -26,5 +26,5 @@ We now give a more precise definition of the format. Grammars are described by a
 
 Write a **non-ambiguous** CFG generating the language over $\\{a, b\\}$ where the first half of each word only contains $a$'s and the second half only contains $b$'s.
 ```cpp
-S -> aSb |
+S(#) -> aS(#)b |
 ```
