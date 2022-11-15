@@ -109,4 +109,4 @@ A -> aA |
 B -> Bb |
 ```
 
-_Note: Notice how_ $(i \ge j \vee i \leq 2j)$ _is always be true. Furthermore if we reach a point where there are for example only a's remaining, in order to avoid ambiguity with the empty word, we need that **aA**_
+_Note: Notice how_ $i \ge j \vee i \leq 2j$ _is always be true. Furthermore if we reach a point where there are for example only a's remaining, in order to avoid ambiguity with the empty word, we need **aA** instead of an **A** alone_
