@@ -384,3 +384,59 @@ Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$,
 S -> aSa | bSb | Qc
 Q -> aQ | bQ |
 ```
+
+### Exercise 36: Non-ambiguous CFG for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge y^R \text\{ suffix of \} x \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$, $y$ are words over $\\{a, b\\}$ such that $y^R$ is suffix of $x$, i.e., such that $x$ can be written of the form $zy^R$ for some word $z$.
+
+```py
+S -> QY
+Q -> aQ | bQ |
+Y -> aYa | bYb | c
+```
+
+### Exercise 37: Non-ambiguous CFG for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge |x|=|y| \wedge |x|\_\{aa\}&gt;0 \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $xcy$, where $x$, $y$ are words over $\\{a, b\\}$ with the same length and such that there is some occurrence of $aa$ in $x$.
+
+```py
+S -> bSa | bSb | aAb | aAa
+A -> bSb | bSa | aQa | aQb
+Q -> bQa | bQb | aQb | aQa | c
+```
+
+### Exercise 38: CFG for the complement of $\\{ a^n b^n \mid n\geq 0 \\}$
+
+Write a CFG generating the language of words over $\\{a,b\\}$ that are not of the form $a^n b^n$, where $n \ge 0$.
+
+```py
+S -> XbaX | Y
+X -> aX | bX | 
+Y -> aYb | A | B
+A -> aA | a
+B -> bB | b
+```
+
+### Exercise 39: Non-ambiguous CFG for the complement of $\\{ a^n b^n \mid n\geq 0 \\}$
+
+Write a **non-ambiguous** CFG generating the language of words over $\\{a,b\\}$ that are not of the form $a^n b^n$, where $n \ge 0$.
+
+```py
+S -> Z | Y
+X -> aX | bX | 
+Y -> aYb | A | B
+A -> aA | a
+B -> bB | b
+Z -> aZ | bT
+T -> bT | aX
+```
+
+### Exercise 40: Non-ambiguous CFG for the complement of $\\{ w \in \\{a,b\\}^* \mid w=w^R \\}$
+
+Write a **non-ambiguous** CFG generating the language of words over $\\{a,b\\}$ that are not palindromic.
+
+```py
+S -> aXb | bXa | aSa | bSb
+X -> aX | bX |
+```
+
