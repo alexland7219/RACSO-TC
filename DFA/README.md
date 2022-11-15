@@ -400,7 +400,7 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 | **F** | Y | N | + |
 </div>
 
-### Exercise 25: Minimum DFA for ### Exercise 23: Minimum DFA for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{5} \\}$
+### Exercise 25: Minimum DFA for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{5} \\}$
 
 Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that interpreted in binary represent a natural number multiple of $5$ (in particular, the empty word represents $0$, which is multiple of $5$).
 
