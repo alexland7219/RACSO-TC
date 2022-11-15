@@ -325,3 +325,24 @@ B -> aBB | b | cB
 A -> bAA | a | cA
 ```
 
+### Exercise 30: Non-ambiguous CFG for $\\{ w \in \\{a,b,c\\}^* \mid |w|_a+|w|_b=|w|_c \\}$
+
+Write a **non-ambiguous** CFG generating the words over $\\{a,b,c\\}$ such that the number of occurrences of $a$ plus the numnber of occurrences of $b$ coincides with the number of occurrences of $c$.
+
+```py
+S -> aCS | bCS | cQS |
+C -> aCC | bCC | c
+Q -> a | b | cQQ
+```
+
+### Exercises 31: Non-ambiguous CFG for $\\{ w \in \\{a,b\\}^* \mid 2|w|_a=|w|_b \\}$
+
+Write a **non-ambiguous** CFG generating the words over $\\{a,b\\}$ such that the number of occurrences of $b$ is twice as much as the number of occurrences of $a$.
+
+```py
+S -> aBBS | bAS | bCBS |
+B -> b | aBBB
+A -> bC | bAA
+C -> a | bAC
+```
+
