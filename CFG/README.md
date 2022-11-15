@@ -57,6 +57,7 @@ Write a **non-ambiguous** CFG generating the words of the form $a^i b^j$ where t
 S -> aSb | T
 T -> Tb |
 ```
+_Note: Notice how the symbol **T** is a symbol that will generate zero or more b's forever_
 
 ### Exercise 5: Non-ambiguous CFG for $\\{ a^i b^j \mid 2i\leq j \\}$
 
@@ -69,3 +70,31 @@ B -> Bb |
 ```
 
 ### Exercise 6: CFG for $\\{ a^i b^j \mid 2i\geq j \\}$
+
+Write a CFG generating the words of the form $a^i b^j$ where the number of $b$'s is at most twice the number of $a$'s.
+
+```py
+S -> aSbb | aSb | aS |
+```
+
+_Note: In this case RACSO doesn't ask for non-ambiguity_
+
+### Exercise 7: Non-ambiguous CFG for $\\{ a^i b^j \mid 2i\geq j \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $a^i b^j$ where the number of $b$'s is at most twice the number of $a$'s.
+
+```py
+S -> aSbb | aAb | A
+A -> aA |
+```
+
+_Note: This is the previous exercise but without ambiguity._
+
+### Exercise 8: Non-ambiguous CFG for $\\{ a^i b^j \mid j\leq i\leq 2j \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $a^i b^j$ where the number of $a$'s is at least the number of $b$'s, but at most twice the number of $b$'s.
+
+```py
+S -> aaSb | T
+T -> aTb |
+```
