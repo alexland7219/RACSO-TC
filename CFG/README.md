@@ -158,3 +158,12 @@ _Note: **H** will recognize those with_ $i = j$ _followed by a number of c's we 
 ### Exercise 13: CFG for $\\{ a^{n_0} b a^{n_1} b \ldots a^{n_{m-1}} b a^{n_m} \mid m\geq 1 \wedge \exists i\in\\{1,\ldots,m\\}: (n_0 = n_i) \\}$
 
 Write a CFG (**which will be ambiguous**) generating the words of the form $a^\{n_0\}ba^\{n_1\}b\ldots a^\{n_\{m-1\}\} b a^\{n_m\}$ for which there exists an $i\in\\{1,\ldots,m\\}$ such that ${n_0}={n_i}$.
+
+```py
+S -> SbA | Y
+Y -> aYa | bXb | b
+X -> aX | bX | 
+A -> Aa
+```
+
+_Note: From the beginning we can take two options. Either forget about the rightmost set of a's or take it and try to match every a from the beginning to every a from the end. We are introduced to a symbol that generates_ $\Sigma ^*$, **X**.
