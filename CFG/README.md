@@ -272,3 +272,15 @@ B -> SaSaS
 ```
 
 _Note: To solve this exercise, we keep reading words as if it were palindromic. Without loss of generality, if we read two a's from both ends, then the word can be broken into **S**b**S**b**S**_ 
+
+### Exercise 25: CFG for $\\{ w \in \\{a,b,c\\}^* \mid |w|_a=|w|_b \\}$
+
+Write a CFG generating the words over $\\{a, b, c\\}$ with the same number of $a$'s and $b$'s.
+
+```py
+S -> aSb | bSa | cQa | aQc | cWb | bWc | aAa | bBb | cSc | c |
+Q -> SbS
+W -> SaS
+A -> SbSbS
+B -> SaSaS
+```
