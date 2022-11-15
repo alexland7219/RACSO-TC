@@ -297,4 +297,21 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that end in
 | **W** | W | W | |
 </div>
 
+### Exercise 18: Minimum DFA for $\\{ w \in \\{a,b,c\\}^* \mid |w|_{abc}\leq 1 \\}$
 
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that have at most one occurrence of the subword _abc_.
+
+<div align="center">
+
+| | a | b | c | |
+|---|---|---|---|---|
+| **S** | A1 | S | S | + |
+| **A1** | A1 | AB1 | S | + |
+| **AB1** | A1 | S | C | + |
+| **C** | A2 | C | C | + |
+| **A2** | A2 | AB2 | C | + |
+| **AB2** | A2 | C | W | + |
+| **W** | W | W | W | |
+</div>
+
+_Note: Just after reading the first abc we always go to state **C**. Afterwards if we were to read another abc we would go to **W**._
