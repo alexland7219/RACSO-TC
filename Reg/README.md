@@ -308,9 +308,9 @@ main
 }
 ```
 
-### Exercise 11: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid \exists x,y: (w=xay\ \wedge\ |y|=2) \\}$ and $\sigma$ is the substitution defined by $\sigma(a)=\\{aa\\}*$ and $\sigma(b)=\\{a,aba,bab\\}$
+### Exercise 11: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid \exists x,y: (w=xay\ \wedge\ |y|=2) \\}$ and $\sigma$ is the substitution defined by $\sigma(a)=\\{aa\\}^*$ and $\sigma(b)=\\{a,aba,bab\\}$
 
-Give a regular description for the image of the set of words over $\\{a, b\\}$, with an $a$ in the third position starting from the end, through the substitution $\sigma$ defined by $\sigma(a)=\\{aa\\}*$ and $\sigma(b)=\\{a,aba,bab\\}$.
+Give a regular description for the image of the set of words over $\\{a, b\\}$, with an $a$ in the third position starting from the end, through the substitution $\sigma$ defined by $\sigma(a)=\\{aa\\}^*$ and $\sigma(b)=\\{a,aba,bab\\}$.
 
 ```c++
 main
@@ -323,3 +323,8 @@ main
   	output ab* a ab ab;
 }
 ```
+
+### Exercise 12: Regular description for the language recognized by the NFA with set of states $\\{0,1,2,3,4,5\\}$, initial state $0$, accepting state $4$, and transitions $\delta(0,a)=\\{1,3\\}, \delta(0,b)=4, \delta(1,a)=4, \delta(1,b)=\\{2,3\\}, \delta(2,b)=5, \delta(3,a)=2, \delta(4,a) = \\{0,5\\}, \delta(4,b)=\\{0,2\\}, \delta(5,a)=4$
+
+Give a regular description for the language recognized by the NFA represented here:
+
