@@ -519,3 +519,17 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ which have 
 </div>
 
 _Note: Notice how there cannot be any occurrence of bb, since every single occurrence of ab already has one occurrence of b._
+
+### Exercise 32: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{aba}=|w|_b \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ which have the same number of occurrences of $aba$ as occurrences of $b$.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | A | W | + |
+| **A** | A | B | + |
+| **B** | A | W | |
+| **W** | W | W | |
+</div>
