@@ -427,4 +427,4 @@ main
 
 _Note: One DFA for each possible initial state_
 
-### Exercise 14: Regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $4$ in the digraph with edges labelled with lengths whose set of nodes is $\\{0,1,2,3,4\\}$ and whose set of edges is $\\{0\xrightarrow{4}1,\;1\xrightarrow{4}2,\;1\xrightarrow{6}3,\;2\xrightarrow{4}0,\;2\xrightarrow{2}4,\;3\xrightarrow{2}0,\;4\xrightarrow{4}3\\}$
+### Exercise 14: Regular description for $\\{a^n\mid n\in D\\}$, where $D$ is the set of distances of paths (with allowed repetition of nodes in the path) from node $0$ to node $4$ in the digraph with edges labelled with lengths whose set of nodes is $\\{0,1,2,3,4\\}$ and whose set of edges is $\\{0\xrightarrow{4}1,\ 1\xrightarrow{4}2,\ 1\xrightarrow{6}3,\ 2\xrightarrow{4}0,\ 2\xrightarrow{2}4,\ 3\xrightarrow{2}0,\ 4\xrightarrow{4}3\\}$
