@@ -385,4 +385,4 @@ Describe the minimum DFA that recognizes the words over $\\{0, 1\\}$ such that i
 | **F** | Y | N | |
 </div>
 
-_Note: In binary, multiples of_ $4$ _are those that end in two zeros_
+_Note: In binary, multiples of_ $4$ _are those that end in two zeros. Furthermore we can suppose we start with two zeros in the beginning_
