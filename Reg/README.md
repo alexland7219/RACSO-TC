@@ -233,4 +233,44 @@ main
 }
 ```
 
-_Note: Multiples of 12 are those multiples of 4 and 5 simultaneously_
+_Note: Multiples of 20 are those multiples of 4 and 5 simultaneously_
+
+### Exercise 8: Regular description for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{60}\\}$
+
+Give a regular description for the set of words $w$ over $\\{0,1\\}$ such that the natural value obtained by interpreting $w$ as a binary number, that is $\mathtt{value}_2(w)$, is multiple of $60$ (in particular, the empty word represents $0$, which is multiple of $60$).
+
+```c++
+main
+{
+  	mult4 = "
+                0 1
+        K       K N +
+        N       T N
+        T       K N
+        ";
+
+        mult5 = "
+                0 1
+        Z       Z U +
+        U       D T
+        D       Q Z
+        T       U D
+        Q       T Q
+        ";
+        mult3 = "
+                0 1
+        Z       Z U +
+        U       D Z
+        D       U D
+        ";
+  
+  	    output mult3 & mult4 & mult5;
+}
+```
+
+_Note: Multiples of 60 are those multiples of 4, 5 and 3 simultaneously_
+
+
+### Exercise 9: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid \exists x,y: (w=xay\ \wedge\ |y|=2) \\}$ and $\sigma$ is the morphism defined by $\sigma(a)=aba$ and $\sigma(b)=bab$
+
+Give a regular description for the image of the set of words over $\\{a, b\\}$, with an $a$ in the third position starting from the end, through the morphism $\sigma$ defined by $\sigma(a)=aba$ and $\sigma(b)=bab$.
