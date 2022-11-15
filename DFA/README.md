@@ -447,6 +447,6 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ whose prefi
 |---|---|---|---|
 | **S** | W | I | + |
 | **I** | S | B | + |
-| **B** | S | W | + |
+| **B** | I | W | + |
 | **W** | W | W | |
 </div>
