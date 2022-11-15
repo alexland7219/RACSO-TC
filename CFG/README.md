@@ -260,3 +260,15 @@ Write a **non-ambiguous** CFG generating the language of the well-paranthesized 
 ```py
 S -> (S)S | [S]S |
 ```
+
+### Exercise 24: CFG for $\\{ w \in \\{a,b\\}^* \mid |w|_a=|w|_b \\}$
+
+Write a CFG generating the words over $\\{a, b\\}$ with the same number of $a$'s and $b$'s.
+
+```py
+S -> aSb | bSa | aAa | bBb |
+A -> SbSbS
+B -> SaSaS
+```
+
+_Note: To solve this exercise, we keep reading words as if it were palindromic. Without loss of generality, if we read two a's from both ends, then the word can be broken into **S**b**S**b**S**_ 
