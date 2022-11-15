@@ -472,7 +472,7 @@ _Note: This language is the reverse of the language recognized by the previous l
 
 ### Exercise 29: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid \forall y: ((|y|=2 \wedge |y|_b&gt;0) \Rightarrow |w|_y&gt;0) \\}$
 
-Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that contain all possible subwords of length $2$ with at least one $b$. Note that there are only three of such subwords ($ab$, $ba$, $bb$), but they might be overlapped.
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that contain all possible subwords of length $2$ with at least one $b$. Note that there are only three of such subwords ( $ab$, $ba$, $bb$), but they might be overlapped.
 
 <div align="center">
 
@@ -490,4 +490,17 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ that contai
 | **Y** | Y | Y | + |
 </div>
 
+### Exercise 30: Minimum DFA for $\\{ w \in \{a,b\\}^* \mid |w|\_{ab}=|w|\_{ba} \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ which have the same number of occurrences of $ab$ as occurrences of $ba$.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | A | B | + |
+| **A** | A | C | + |
+| **B** | D | B | + |
+| **C** | A | C | |
+| **D** | D | B | |
 </div>
