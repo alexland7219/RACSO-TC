@@ -324,7 +324,7 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ such that b
 
 | | a | b | c | |
 |---|---|---|---|---|
-| **S** | F | S | F | + |
+| **S** | S | F | S | + |
 | **F** | 1 | W | F | + |
 | **1** | S | W | 1 | + |
 | **W** | W | W | W | |
