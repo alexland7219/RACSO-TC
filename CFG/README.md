@@ -110,3 +110,14 @@ B -> Bb |
 ```
 
 _Note: Notice how_  $i \ge j \vee i \leq 2j$  _is always be true. Furthermore if the number of a's equals the number of b's and we need to generate the empty word from **S**, in order to avoid ambiguity with the empty word, we need **aA** instead of an **A** alone_
+
+### Exercise 10: Non-ambiguous CFG for $\\{ a^i b^j c^k \mid i=j+k \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $a^i b^j c^k$ such that the number of $a$'s coincides with the number of $b$'s plus the number of $c$'s.
+
+```py
+S -> aSc | aKb |
+K -> aKb |
+```
+
+_Note: We keep removing a's from the start and b's from the end until there are only a's and b's remaining, in which case we move to symbol **K**_
