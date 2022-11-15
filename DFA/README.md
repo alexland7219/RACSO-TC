@@ -504,3 +504,18 @@ Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ which have 
 | **C** | A | C | |
 | **D** | D | B | |
 </div>
+
+### Exercise 31: Minimum DFA for $\\{ w \in \\{a,b\\}^* \mid |w|_{ab}=|w|_b \\}$
+
+Describe the minimum DFA that recognizes the words over $\\{a, b\\}$ which have the same number of occurrences of $ab$ as occurrences of $b$.
+
+<div align="center">
+
+| | a | b | |
+|---|---|---|---|
+| **S** | A | W | + |
+| **A** | A | S | + |
+| **W** | W | W | |
+</div>
+
+_Note: Notice how there cannot be any occurrence of bb, since every single occurrence of ab already has one occurrence of b._
