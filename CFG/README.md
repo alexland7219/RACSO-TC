@@ -40,11 +40,31 @@ K -> aKb | c
 
 ### Exercise 3: Non-ambiguous CFG for $\\{ a^i b^j \mid i\geq j \\}$
 
-Write a **non-ambiguous** generating the words of the form $a^i b^j$ where the number of $a$'s is at least the number of $b$'s.
+Write a **non-ambiguous** CFG generating the words of the form $a^i b^j$ where the number of $a$'s is at least the number of $b$'s.
 
 ```py
-S -> aSb | aT |
+S -> aSb | T 
 T -> aT |
 ```
 
 _Note: We need two different symbols. Trying to merge everything into one would lead to ambiguity in the CFG_
+
+### Exercise 4: Non-ambiguous CFG for $\\{ a^i b^j \mid i\leq j \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $a^i b^j$ where the number of $a$'s is at most the number of $b$'s.
+
+```py
+S -> aSb | T
+T -> Tb |
+```
+
+### Exercise 5: Non-ambiguous CFG for $\\{ a^i b^j \mid 2i\leq j \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $a^i b^j$ where the number of $b$'s is at least twice the number of $a$'s.
+
+
+```py
+S -> aSbb | B
+B -> Bb |
+```
+
