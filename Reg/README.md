@@ -274,3 +274,19 @@ _Note: Multiples of 60 are those multiples of 4, 5 and 3 simultaneously_
 ### Exercise 9: Regular description for $\sigma(L)$ where $L=\\{ w \in \\{a,b\\}^* \mid \exists x,y: (w=xay\ \wedge\ |y|=2) \\}$ and $\sigma$ is the morphism defined by $\sigma(a)=aba$ and $\sigma(b)=bab$
 
 Give a regular description for the image of the set of words over $\\{a, b\\}$, with an $a$ in the third position starting from the end, through the morphism $\sigma$ defined by $\sigma(a)=aba$ and $\sigma(b)=bab$.
+
+```c++
+main 
+{
+    a = "aba";
+    b = "bab";
+    ab = a | b;
+
+    reg = ab* a ab ab;
+
+    output reg;
+}
+```
+
+_Note: By replacing the variables a and b we implicitly do a substitution_
+
