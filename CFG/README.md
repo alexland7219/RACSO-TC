@@ -68,3 +68,4 @@ S -> aSbb | B
 B -> Bb |
 ```
 
+### Exercise 6: CFG for $\\{ a^i b^j \mid 2i\geq j \\}$
