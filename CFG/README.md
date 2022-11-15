@@ -167,3 +167,7 @@ A -> Aa
 ```
 
 _Note: From the beginning we can take two options. Either forget about the rightmost set of a's or take it and try to match every a from the beginning to every a from the end. We are introduced to a symbol that generates_ $\Sigma ^*$, **X**.
+
+### Exercise 14: Non-ambiguous CFG for $\\{ a^\{n_0\} b a^\{n_1\} b \ldots a^\{n_\{m-1\}\} b a^\{n_m\} \mid m\geq 1 \wedge (n_0 = \sum_\{1\leq i\leq m\} n_i) \\}$
+
+Write a **non-ambiguous** CFG generating the words of the form $a^\{n_0\}ba^\{n_1\}b\ldots a^\{n_\{m-1\}\} b a^\{n_m\}$, with $m \ge 1$, such that $n_0$ is equal to the sum $n_1 + n_2 + \ldots + n_m$.
