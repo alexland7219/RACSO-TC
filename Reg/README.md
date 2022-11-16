@@ -639,3 +639,27 @@ main
 ```
 
 _Note: It is very easy if we have solved Exercise 20 already_
+
+### Exercise 23: Regular description for $\\{ \mathtt{intercal}(w_1,w_2,w_3) \mid w_1,w_2,w_3\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|=|w_3|\ \wedge\ \mathtt{value}_2(w_1)+\mathtt{value}_2(w_2)=\mathtt{value}_2(w_3) \\}$
+
+Give a regular description for the set of words obtained by intercaling three words $w_1$, $w_2$, $w_3$ over $\\{0,1\\}$ with the same length and such that the sum of the natural values obtained from $w_1$, $w_2$ by interpreting them as binary numbers, that is $\mathtt{value}_2(w_1)+\mathtt{value}_2(w_2)$, coincides with $\mathtt{value}_2(w_3)$.
+
+```c++
+main
+{
+	SUM = "
+		a b c d e f g h
+	N	N M M N M N C M +
+	C	M N C M C M M C
+	M	M M M M M M M M 
+	";
+  
+  	REV = reverse(SUM);
+  
+  	output substitution(REV, "a"->"000", "b"->"001", "c"->"010",
+			    	 "d"->"011", "e"->"100", "f"->"101",
+			    	 "g"->"110", "h"->"111");
+}
+```
+
+_Note: It is easier to add binary numbers from the end to the beginning of the word_
