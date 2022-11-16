@@ -543,7 +543,9 @@ main
 }
 ```
 
-### Exercise 19: Regular description for $\\{ \mathtt{intercal}(w_1,w_2) \mid w_1,w_2\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|\ \wedge\ \mathtt{value}_2(w_1)&lt;\mathtt{value}_2(w_2) \\}$, where $\mathtt{intercal}(a_1w_1,\ldots,a_nw_n)=a_1\ldots a_n\mathtt{intercal}(w_1,\ldots,w_n)$ and $\mathtt{intercal}(\lambda,\ldots,\lambda)=\lambda$
+_Notice: When intercaling two words, we read one symbol of the first one, then one of the other one, succcessively. We can easily build a DFA for this one_
+
+### Exercise 19: Regular description for $\\{ \mathtt{intercal}(w_1,w_2) \mid w_1,w_2\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|\ \wedge\ \mathtt{value}_2(w_1)&lt;\mathtt{value}_2(w_2) \\}$
 
 Give a regular description for the set of words obtained by intercaling two words $w_1$, $w_2$ over $\\{0,1\\}$ with the same length and such that the natural number obtained by interpreting $w_1$ as a binary number, that is $\mathtt{value}_2(w_1)$, is smaller than $\mathtt{value}_2(w_2)$.
 
@@ -563,3 +565,28 @@ main
  	output DFA;
 }
 ```
+
+### Exercise 20: Regular description for $\\{ \mathtt{intercal}(w_1,w_2,w_3) \mid w_1,w_2,w_3\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|=|w_3|\ \wedge\ \mathtt{value}_2(w_1)&gt;\mathtt{value}_2(w_2)&gt;\mathtt{value}_2(w_3) \\}$
+
+Give a regular description for the set of words obtained by intercaling three words $w_1$, $w_2$, $w_3$ over $\\{0,1\\}$ with the same length and such that the natural number obtained by interpreting $w_1$ as a binary number, that is $\mathtt{value}_2(w_1)$, is nigger than $\mathtt{value}_2(w_2)$, that in addition is bigger than $\mathtt{value}_2(w_3)$.
+
+```c++
+main
+{
+	DFA = "
+		a b c d e f g h
+	A	A M M M B M C A
+	B	B M Y B B M Y B 
+	C	C C M M Y Y C C
+	M	M M M M M M M M
+	Y 	Y Y Y Y Y Y Y Y +
+	";
+  
+  	output substitution(DFA, "a"->"000", "b"->"001", "c"->"010",
+			    	 "d"->"011", "e"->"100", "f"->"101",
+			    	 "g"->"110", "h"->"111");
+  
+}
+```
+
+_Note: Build a DFA by reading three symbols at a time_
