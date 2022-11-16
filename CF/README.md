@@ -6,7 +6,7 @@ The format extends the previous one by adding the option to have context-free gr
 
 There are only two restrictions:
 
-- $L \& K$ is invalid when $L$ and $K$ are both context-free languages.
+- $L \\& K$ is invalid when $L$ and $K$ are both context-free languages.
 - $L - K$ is invalid when $K$ is a context-free language.
 
 ## _Exercises on Context-free Operations_
