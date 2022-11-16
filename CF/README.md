@@ -69,3 +69,47 @@ main
 }
 ```
 
+### Exercise 4: Context-free description for $\\{ \mathtt{intercal}(w_1,w_2) \mid w_1,w_2\in\\{a,b\\}^*\ \wedge\ |w_1|=|w_2|\ \wedge\ w_1=w_1^R\ \wedge\ |w_2|\_{aa}=0 \\}$
+
+Give a context-free description for the set of words obtained by intercaling two words $w_1$, $w_2$ over $\\{a,b\\}$ with the same length, where $w_1$ is palindromic and with no occurrences of $aa$ in $w_2$.
+
+```c++
+main
+{
+	ZFG = "S -> aXSaX | bXSbX | aX | bX |
+	       X -> a | b";
+  
+  	NO_AA = "
+		a  b
+	0A	0  0 +
+	0	1A 0A
+	1A	1  1 +
+	1	2A 0A 
+	2A	2A 2A 
+	";
+  
+  	output ZFG & NO_AA;
+}
+```
+
+### Exercise 5: Context-free description for $\\{ \mathtt{intercal}(w_1,w_2) \mid w_1,w_2\in\\{a,b\\}^*\ \wedge\ |w_1|=|w_2|\ \wedge\ |w_2|_{aa}=0\ \wedge\ \forall x_1,y_1,x_2,y_2:(w_1=x_1y_1\ \wedge\ w_2=x_2y_2\ \wedge\ |x_1|=|x_2|\ \Rightarrow\ |x_1|_a\geq|x_2|_a) \\}$
+
+Give a context-free description for the set of words obtained by intercaling two words $w_1$, $w_2$ over $\\{a,b\\}$ with the same length and with no occurrences of $aa$ in $w_2$, and such that for each two prefixes $x_1$, $x_2$ of $w_1$, $w_2$, respectively, of the same length, it holds that $x_1$ has more or equal occurrences of $a$ than $x_2$.
+
+```c++
+main
+{
+  	NO_AA = "
+		a  b
+	0A	0  0 +
+	0	1A 0A
+	1A	1  1 +
+	1	2A 0A 
+	2A	2A 2A 
+	";
+  
+  	EQ_PREF = "S -> aaS | bbS | abS | abSbaS |";
+  
+  	output NO_AA & EQ_PREF;
+}
+```
