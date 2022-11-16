@@ -132,7 +132,7 @@ M -> Zb | ZB -> B
 
 ### Exercise 8: Deterministic uniquely-accepting PDA for $\\{ w \in \\{a,b\\}^* \mid 2|w|\_a\leq|w|\_b \\}$
 
-Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $b$ is at least twice the number of occurrencees of $a$.
+Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $b$ is at least twice the number of occurrences of $a$.
 
 ```ruby
 Z I I B 
@@ -148,4 +148,8 @@ R -> Z | ZX -> M
 M -> Z | Z -> I
 M -> Xa | XXX, Xb | -> M
 ```
+
+### Exercise 9: Uniquely-accepting PDA for $\\{ a^i b^j \mid j\leq i\leq 2j \\}$
+
+Write **uniquely-accepting** DFA (**which cannot be deterministic**) recognizing the words of the form $a^i b^j$ where the number of $a$'s is at least the number of $b$'s, but at most twice the number of $b$'s.
 
