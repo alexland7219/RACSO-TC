@@ -663,3 +663,39 @@ main
 ```
 
 _Note: It is easier to add binary numbers from the end to the beginning of the word. Also **N** for no-carry and **C** for carry_
+
+### Exercise 24: Regular description for $\\{ \mathtt{intercal}(w_1,w_2,w_3,w_4) \mid w_1,w_2,w_3,w_4\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|=|w_3|=|w_4|\ \wedge\ \mathtt{value}_2(w_1)+\mathtt{value}_2(w_2)=\mathtt{value}_2(w_3)&gt;\mathtt{value}_2(w_4) \\}$
+
+Give a regular description for the set of words obtained by intercaling four words $w_1$, $w_2$, $w_3$, $w_4$ over $\\{0,1\\}$ with the same length and such that the sum of the natural values obtained from $w_1$, $w_2$ by interpreting them as binary numbers, that is $\mathtt{value}_2(w_1)+\mathtt{value}_2(w_2)$, coincides with $\mathtt{value}_2(w_3)$, and is bigger than $\mathtt{value}_2(w_4)$.
+
+```c++
+main
+{
+	SUM = "
+		a b c d e f g h i j k l m n o p
+	N	N M M N M N C M N M M N M N C M +
+	C	M N C M C M M C M N C M C M M C
+	M	M M M M M M M M M M M M M M M M
+	";
+
+  	DFA = "
+		a b c d e f g h i j k l m n o p
+	I	I Y I Y I Y I Y M I M I M I M I
+	Y	Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y +
+	M	M M M M M M M M M M M M M M M M
+	";
+
+  
+  	REV = reverse(SUM);
+  	RES = REV & DFA;
+  
+  	output substitution(RES, "a"->"0000", "b"->"0010", "c"->"0100",
+			    	 "d"->"0110", "e"->"1000", "f"->"1010",
+			    	 "g"->"1100", "h"->"1110", "i"->"0001",
+			    	 "j"->"0011", "k"->"0101", "l"->"0111",
+			    	 "m"->"1001", "n"->"1011", "o"->"1101",
+			    	 "p"->"1111");
+  
+  	
+}
+```
