@@ -616,7 +616,7 @@ main
 ```
 ### Exercise 22: Regular description for $\\{ \mathtt{intercal}(w_1,w_3) \mid \exists w_2: (w_1,w_2,w_3\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|=|w_3|\ \wedge\ \mathtt{value}_2(w_1)&gt;\mathtt{value}_2(w_2)&gt;\mathtt{value}_2(w_3)) \\}$
 
-Give a regular description for the set of words obtained by intercaling two words $w_1$, $w_3$ for which there exists another word $w_2$ such that all three $w_1$,$w_2$,$w_3$ satisfy that are words over $\\{0,1\\}$ with the same length and such that the natural number obtained by interpreting $w_1$ as a binary number, that is $\mathtt{value}_2(w_1)$, is bigger than $\mathtt{value}_2(w_2)$, that in addition is bigger than $\mathtt{value}_2(w_3)$.
+Give a regular description for the set of words obtained by intercaling two words $w_1$, $w_3$ for which there exists another word $w_2$ such that all three $w_1$, $w_2$, $w_3$ satisfy that are words over $\\{0,1\\}$ with the same length and such that the natural number obtained by interpreting $w_1$ as a binary number, that is $\mathtt{value}_2(w_1)$, is bigger than $\mathtt{value}_2(w_2)$, that in addition is bigger than $\mathtt{value}_2(w_3)$.
 
 
 ```c++
