@@ -20,7 +20,7 @@ q1 -> Za|ZA, Aa|AA -> q1
 
 ## _RACSO exercises on PDAs_
 
-### Exercise 1: Deterministic uniquely-acceptinfg PDA for $\\{ a^n b^n \mid n\geq 0 \\}$
+### Exercise 1: Deterministic uniquely-accepting PDA for $\\{ a^n b^n \mid n\geq 0 \\}$
 
 Write a **deterministic uniquely-accepting** PDA recognizing the language over $\\{a,b\\}$ where the first half of each word only contains $a$'s and the second half only contains $b$'s.
 
@@ -35,12 +35,11 @@ B -> Z  | Z  -> T
 
 _Note: For every a we read, we push an **A** onto the stack_
 
-### Exercise 2: Deterministic uniquely-acceptinfg PDA for $\\{ a^\{2n\} b^n \mid n\geq 0 \\}$
+### Exercise 2: Deterministic uniquely-accepting PDA for $\\{ a^\{2n\} b^n \mid n\geq 0 \\}$
 
 Write a **deterministic uniquely-accepting** PDA recognizing the words of the form $a^{2n} b^n$, with $n \ge 0$.
 
 ```ruby
-// Write your PDA here...
 Z I I T
 I -> Za | ZI -> A
 A -> Pa | PI, Ia | IP -> A
@@ -49,7 +48,7 @@ B -> I |, Pb | -> B
 B -> Z | Z -> T
 ```
 
-### Exercise 3: Deterministic uniquely-acceptinfg PDA for $\\{ w \in \\{a,b\\}^* \mid |w|\_a=|w|\_b \\}$
+### Exercise 3: Deterministic uniquely-accepting PDA for $\\{ w \in \\{a,b\\}^* \mid |w|\_a=|w|\_b \\}$
 
 Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $a$ coincides with the number of occurrences of $b$.
 
@@ -62,3 +61,5 @@ A -> Z | Z -> I
 B -> Bb | BB, Ba | -> B
 B -> Z | Z -> I
 ```
+
+### Exercise 4: 
