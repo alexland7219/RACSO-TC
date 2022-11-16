@@ -6,7 +6,7 @@ states, and (iv) its transition rules. Hence, in order to describe a PDA we writ
 line the information corresponding to (i), (ii) and (iii), and in the successive lines we write
 the transition rules. For instance, with a first line like:
 
-```java
+```ruby
 Z q0 q0 q3
 ```
 
@@ -14,7 +14,7 @@ we specify that (i) the initial contents of the stack is the symbol $Z$, that (i
 of the automaton is $q0$, and (iii) that the accepting states are $q0$ and $q3$. After that line, we
 need to specify each of the transitions rules. To this end, we may use two different syntaxes. I'm only going to describe the one we'll be using:
 
-```java
+```ruby
 q1 -> Za|ZA, Aa|AA -> q1
 ```
 
@@ -24,7 +24,7 @@ q1 -> Za|ZA, Aa|AA -> q1
 
 Write a **deterministic uniquely-accepting** PDA recognizing the language over $\\{a,b\\}$ where the first half of each word only contains $a$'s and the second half only contains $b$'s.
 
-```rust
+```ruby
 Z I I T
 I -> Za | ZA -> A
 A -> Aa | AA -> A
@@ -52,7 +52,7 @@ B -> Z | Z -> T
 
 Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $a$ coincides with the number of occurrences of $b$.
 
-```perl
+```ruby
 Z I I
 I -> Za | ZA -> A
 I -> Zb | ZB -> B
@@ -67,7 +67,7 @@ B -> Z | Z -> I
 Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $a$ is different from the number of occurrences of $b$.
 
 
-```go
+```ruby
 Z I A B
 I -> Za | ZX -> A
 I -> Zb | ZX -> B
@@ -75,4 +75,37 @@ A -> Xa | XA, Aa | AA, Ab | -> A
 B -> Xb | XB, Bb | BB, Ba | -> B
 A -> Xb | -> I
 B -> Xa | -> I
+```
+
+### Exercise 5: Deterministic uniquely-accepting PDA for $\\{ w \in \\{a,b\\}^* \mid |w|\_a\geq|w|\_b \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $a$ is greater than or equal to the number of occurrences of $b$.
+
+```ruby
+Z I I A
+I -> Za | ZX -> A
+I -> Zb | ZX -> B
+A -> Xa | XA, Aa | AA, Ab | -> A
+B -> Xb | XB, Bb | BB, Ba | -> B
+A -> Xb | -> I
+B -> Xa | -> I
+```
+
+### Exercise 6: Deterministic uniquely-accepting PDA for $\\{ w \in \\{a,b\\}^* \mid 2|w|\_a=|w|\_b \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $b$ is twice the number of occurrences of $a$.
+
+```ruby
+Z I I 
+I -> Za | ZAA -> A
+I -> Zb | ZB -> B
+A -> Aa | AAA, Ab | -> A
+A -> Z | Z -> I
+B -> Bb | BB -> B
+B -> Z | Z -> I
+B -> Ba | -> R
+R -> B | -> B
+R -> Z | ZX -> M
+M -> Z | Z -> I
+M -> Xa | XXX, Xb | -> M
 ```
