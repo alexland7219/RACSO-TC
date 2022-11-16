@@ -62,4 +62,17 @@ B -> Bb | BB, Ba | -> B
 B -> Z | Z -> I
 ```
 
-### Exercise 4: 
+### Exercise 4: Deterministic uniquely-accepting PDA for $\\{ w \in \\{a,b\\}^* \mid |w|\_a\neq|w|\_b \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $a$ is different from the number of occurrences of $b$.
+
+
+```go
+Z I A B
+I -> Za | ZX -> A
+I -> Zb | ZX -> B
+A -> Xa | XA, Aa | AA, Ab | -> A
+B -> Xb | XB, Bb | BB, Ba | -> B
+A -> Xb | -> I
+B -> Xa | -> I
+```
