@@ -591,7 +591,7 @@ main
 
 _Note: Build a DFA by reading three symbols at a time_
 
-### Exercise 20: Regular description for $\\{ \mathtt{intercal}(w_1,w_2,w_3) \mid w_1,w_2,w_3\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|=|w_3|\ \wedge\ \mathtt{value}_2(w_1)&gt;\mathtt{value}_2(w_2)&lt;\mathtt{value}_2(w_3) \\}$
+### Exercise 21: Regular description for $\\{ \mathtt{intercal}(w_1,w_2,w_3) \mid w_1,w_2,w_3\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|=|w_3|\ \wedge\ \mathtt{value}_2(w_1)&gt;\mathtt{value}_2(w_2)&lt;\mathtt{value}_2(w_3) \\}$
 
 Give a regular description for the set of words obtained by intercaling three words $w_1$, $w_2$, $w_3$ over $\\{0,1\\}$ with the same length and such that the natural number obtained by interpreting $w_1$ as a binary number, that is $\mathtt{value}_2(w_1)$, is bigger than $\mathtt{value}_2(w_2)$, that in addition is smaller than $\mathtt{value}_2(w_3)$.
 
@@ -614,3 +614,28 @@ main
   
 }
 ```
+### Exercise 22: Regular description for $\\{ \mathtt{intercal}(w_1,w_3) \mid \exists w_2: (w_1,w_2,w_3\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|=|w_3|\ \wedge\ \mathtt{value}_2(w_1)&gt;\mathtt{value}_2(w_2)&gt;\mathtt{value}_2(w_3)) \\}$
+
+Give a regular description for the set of words obtained by intercaling two words $w_1$, $w_3$ for which there exists another word $w_2$ such that all three $w_1$,$w_2$,$w_3$ satisfy that are words over $\\{0,1\\}$ with the same length and such that the natural number obtained by interpreting $w_1$ as a binary number, that is $\mathtt{value}_2(w_1)$, is bigger than $\mathtt{value}_2(w_2)$, that in addition is bigger than $\mathtt{value}_2(w_3)$.
+
+
+```c++
+main
+{
+	DFA = "
+		a b c d e f g h
+	A	A M M M B M C A
+	B	B M Y B B M Y B 
+	C	C C M M Y Y C C
+	M	M M M M M M M M
+	Y 	Y Y Y Y Y Y Y Y +
+	";
+  
+  	output substitution(DFA, "a"->"00", "b"->"01", "c"->"00",
+			    	 "d"->"01", "e"->"10", "f"->"11",
+			    	 "g"->"10", "h"->"11");
+  
+}
+```
+
+_Note: It is very easy if we have solved Exercise 20 already_
