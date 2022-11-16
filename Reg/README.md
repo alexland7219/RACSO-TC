@@ -662,4 +662,4 @@ main
 }
 ```
 
-_Note: It is easier to add binary numbers from the end to the beginning of the word_
+_Note: It is easier to add binary numbers from the end to the beginning of the word. Also **N** for no-carry and **C** for carry_
