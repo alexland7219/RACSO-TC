@@ -24,7 +24,7 @@ q1 -> Za|ZA, Aa|AA -> q1
 
 Write a **deterministic uniquely-accepting** PDA recognizing the language over $\\{a,b\\}$ where the first half of each word only contains $a$'s and the second half only contains $b$'s.
 
-```java
+```rust
 Z I I T
 I -> Za | ZA -> A
 A -> Aa | AA -> A
@@ -39,7 +39,7 @@ _Note: For every a we read, we push an **A** onto the stack_
 
 Write a **deterministic uniquely-accepting** PDA recognizing the words of the form $a^{2n} b^n$, with $n \ge 0$.
 
-```javascript
+```ruby
 // Write your PDA here...
 Z I I T
 I -> Za | ZI -> A
@@ -47,4 +47,18 @@ A -> Pa | PI, Ia | IP -> A
 A -> Pb | -> B
 B -> I |, Pb | -> B
 B -> Z | Z -> T
+```
+
+### Exercise 3: Deterministic uniquely-acceptinfg PDA for $\\{ w \in \\{a,b\\}^* \mid |w|\_a=|w|\_b \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $a$ coincides with the number of occurrences of $b$.
+
+```perl
+Z I I
+I -> Za | ZA -> A
+I -> Zb | ZB -> B
+A -> Aa | AA, Ab | -> A
+A -> Z | Z -> I
+B -> Bb | BB, Ba | -> B
+B -> Z | Z -> I
 ```
