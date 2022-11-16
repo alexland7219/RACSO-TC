@@ -109,3 +109,23 @@ R -> Z | ZX -> M
 M -> Z | Z -> I
 M -> Xa | XXX, Xb | -> M
 ```
+
+### Exercise 7: Deterministic uniquely-accepting PDA for $\\{ w \in \\{a,b\\}^* \mid 2|w|\_a\geq|w|\_b \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $b$ is at most twice the number of occurrencees of $a$.
+
+```ruby
+Z I I M A
+I -> Za | ZAA -> A
+I -> Zb | ZB -> B
+A -> Aa | AAA, Ab |, Za | ZAA -> A
+A -> Zb | ZB -> B
+B -> Bb | BB -> B
+B -> Z | Z -> I
+B -> Ba | -> R
+R -> B | -> B
+R -> Z | ZX -> M
+M -> Xa | XXX, Xb | -> M
+M -> Za | ZAA -> A
+M -> Zb | ZB -> B
+```
