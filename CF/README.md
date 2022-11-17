@@ -113,3 +113,79 @@ main
   	output NO_AA & EQ_PREF;
 }
 ```
+### Exercise 6: Context-free description for $\\{ a^ib^ja^kb^ra^sb^t \mid i+k+s=j+r+t \\}$
+
+Give a context-free description for the set of words of the form $a^i b^j a^k b^r a^s b^t$ such that $i+k+s=j+r+t$.
+
+```c++
+main
+{
+	EQ_AMOUNT = "S -> SaSbS | SbSaS |";
+	
+  	ORDER = "
+		a  b
+	A1	A1 B1 +
+	B1	A2 B1 +
+	A2	A2 B2 +
+	B2	A3 B2 +
+	A3	A3 B3 +
+	B3	M  B3 +
+	M	M  M
+	";
+  
+  	output EQ_AMOUNT & ORDER;
+}
+```
+
+### Exercise 7: Context-free description for $\\{ a^ib^ja^kb^ra^sb^t \mid i+k+s=2(j+r+t) \\}$
+
+Give a context-free description for the set of words of the form $a^i b^j a^k b^r a^s b^t$ such that $i+k+s=2(j+r+t)$.
+
+```c++
+main
+{
+	DOUBLE = "S -> SaSaSbS | SaSbSaS | SbSaSaS |";
+	
+  	ORDER = "
+		a  b
+	A1	A1 B1 +
+	B1	A2 B1 +
+	A2	A2 B2 +
+	B2	A3 B2 +
+	A3	A3 B3 +
+	B3	M  B3 +
+	M	M  M
+	";
+  
+  	output DOUBLE & ORDER;
+}
+```
+
+### Exercise 8: Context-free description for $\\{ a^ib^ja^kb^ra^sb^t \mid i+k+r+t=j+s \\}$
+
+Give a context-free description for the set of words of the form $a^i b^j a^k b^r a^s b^t$ such that $i+k+r+t=j+s$
+
+```c++
+main
+{
+    ZFG = "S -> aCS | bCS | cQS | dQS |
+    	   C -> aCC | bCC | c | d
+	   Q -> a | b | cQQ | dQQ";
+    
+    // A C A B D B
+    // Llavors A's + B's = C's + D's
+    ORDER = "
+		a  b  c d
+	A1	A1 B1 C D +
+	C	A2 B1 C D +
+	A2	A2 B1 M D +
+	B1	M  B1 M D +
+	D	M  B2 M D +
+	B2	M  B2 M M +
+	M	M  M  M M
+	";
+  
+    output substitution(ZFG & ORDER, "c"->"b", "d"->"a");
+
+}
+```
