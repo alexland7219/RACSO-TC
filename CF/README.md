@@ -189,3 +189,33 @@ main
 
 }
 ```
+
+### Exercise 9: Context-free description for $\\{ w_1aw_2aw_3 \mid w_1,w_2,w_3\in\\{0,1\\}^*\ \wedge\ |w_1|=|w_2|_0+|w_3|_1\ \wedge\ |w_1w_2|_{111}\geq 1 \\}$
+
+
+Give a context-free description for the set of words of the form $w_1aw_2aw_3$ such that $w1$, $w2$, $w3$ are constructed over the alphabet $\\{0,1\\}$, the size $w_1$​ coincides with the number of $0$'s of $w_2$ plus the number of $1$'s of $w_3$​, and $w_1w_2$​ has at least one occurrence of $111$.
+
+```c++
+main
+{
+	ZFG = "S -> Ta | XS1 | S0 
+	       X -> 0 | 1
+	       T -> XT0 | T1 | a";
+  
+  	TRIPLE_1 = "	
+		0  1  a
+	0	0  1  0A
+	0A	0A 1A M
+	1	0  2  1A
+	1A	0A 2A M
+	2	0  Y  2A
+	2A	0A Y  M
+	Y	Y  Y  Y +
+	M	M  M  M
+	";
+    
+  	output (ZFG & TRIPLE_1);
+  
+}
+```
+
