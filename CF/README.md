@@ -219,3 +219,46 @@ main
 }
 ```
 
+### Exercise 11: Context-free description for $\\{ w\_1aw\_2aw\_3 \mid w\_1,w\_2,w\_3\in\\{0,1\\}^*\ \wedge\ |w\_1|=|w\_3|\ \wedge\ \mathtt{value}\_2(w\_1w\_3)\in\dot{12}\ \wedge\ w\_2\in\\{0^n1^n\mid n\geq 0\\} \\}$
+
+Give a context-free description for the set of words of the form $w_1aw_2aw_3$ such that $w_1$, $w_2$, $w_3$ are constructed over the alphabet $\\{0,1\\}$, the sizes of $w_1$​ and $w_3$​ coincide, $w_1w_3$​ represent a multiple of $12$ in binary (in particular, the empty word represents $0$, which is multiple of $12$), and $w_2$​ is a sequence of $0$’s followed by a sequence of $1$’s where the number $0$’s and $1$’s coincide.
+
+```c++
+main
+{
+
+	STRUCTURE = "S -> PSP | aWa
+		     P -> 0 | 1
+		     W -> 0W1 |";
+  
+  	MULT3 = "
+		0  1  a
+	0	0  1  S0
+	1	2  0  S1
+	2	1  2  S2
+	S0	S0 S0 F0
+	S1	S1 S1 F1
+	S2	S2 S2 F2
+	F0	F0 F1 M  +
+	F1	F2 F0 M 
+	F2	F1 F2 M
+	M	M  M  M
+	";
+  
+  	MULT4 = "
+		0  1  a
+	0	0  1  S0
+	1	2  1  S1
+	2	0  1  S2
+	S0	S0 S0 F0
+	S1	S1 S1 F1
+	S2	S2 S2 F2	
+	F0	F0 F1 M  +
+	F1	F2 F1 M  
+	F2	F0 F1 M
+	M	M  M  M
+	";
+  
+  	output STRUCTURE & MULT3 & MULT4;
+}
+```
