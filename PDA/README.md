@@ -153,3 +153,13 @@ M -> Xa | XXX, Xb | -> M
 
 Write **uniquely-accepting** DFA (**which cannot be deterministic**) recognizing the words of the form $a^i b^j$ where the number of $a$'s is at least the number of $b$'s, but at most twice the number of $b$'s.
 
+```c++
+Z I F
+I -> Z | ZS -> P
+P -> S | BSAA, T | BTA, S | T, T | -> P
+P -> Aa |, Bb | -> P
+P -> Z | -> F
+```
+
+### Exercise 10: 
+
