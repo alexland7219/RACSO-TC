@@ -200,3 +200,22 @@ Z 1 1 F
 4 -> Sc | -> 4
 4 -> Z | Z -> F
 ```
+
+### Exercise 12: Deterministic uniquely-accepting PDA for $\\{ a^i b^j c^k \mid j=i+k \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words of the form $a^i b^j c^k$ such that the number of $b$'s coincides with the number of $a$'s plus the number of $c$'s.
+
+```ruby
+Z 1 1 I F
+1 -> Za | ZY -> 2
+1 -> Zb | ZN -> 4
+2 -> Ya | YY -> 2
+2 -> Yb | -> 3
+3 -> Yb | -> 3
+3 -> Z | Z -> I
+I -> Zb | ZN -> 4
+4 -> Nb | NN -> 4
+4 -> Nc | -> 5
+5 -> Nc | -> 5
+5 -> Z | Z -> F
+```
