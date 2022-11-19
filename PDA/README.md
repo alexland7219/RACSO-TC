@@ -267,3 +267,15 @@ P -> U | AU, U | -> P
 P -> Aa |, Bb |, Cc |, Dd |, Ee | -> P
 P -> Z | Z -> F
 ```
+
+### Exercise 16: Uniquely-accepting PDA for $\\{ w \in \\{a,b\\}^* \mid w=w^R \\}$
+
+Write a **uniquely-accepting** PDA (**which cannot be deterministic**) recognizing the palindromic words over $\\{a,b\\}$.
+
+```ruby
+Z I F
+I -> Z | ZS -> P
+P -> S | ASA, S | BSB, S | A, S | B, S | -> P
+P -> Aa |, Bb | -> P
+P -> Z | Z -> F
+```
