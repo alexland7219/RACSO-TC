@@ -153,7 +153,7 @@ M -> Xa | XXX, Xb | -> M
 
 Write **uniquely-accepting** DFA (**which cannot be deterministic**) recognizing the words of the form $a^i b^j$ where the number of $a$'s is at least the number of $b$'s, but at most twice the number of $b$'s.
 
-```c++
+```ruby
 Z I F
 I -> Z | ZS -> P
 P -> S | BSAA, T | BTA, S | T, T | -> P
@@ -161,5 +161,25 @@ P -> Aa |, Bb | -> P
 P -> Z | -> F
 ```
 
-### Exercise 10: 
+### Exercise 10: Deterministic uniquely-accepting PDA for $\\{ w \in \\{a,b\\}^* \mid |w|\_{aa}=|w|\_b \\}$
 
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words over $\\{a,b\\}$ such that the number of occurrences of $aa$ coincides with the number of occurrences of $b$.
+
+```ruby
+Z 1 1 2
+1 -> Za | Z -> 2
+1 -> Zb | ZB -> 5
+2 -> Zb | ZB -> 5 
+2 -> Za | ZA -> 3
+3 -> Aa | AA -> 3
+3 -> Ab | -> 4
+4 -> Aa | A -> 3
+4 -> Ab | -> 4
+4 -> Z | Z -> 1
+5 -> Bb | BB -> 5
+5 -> Ba | B -> 6
+6 -> Ba | -> 6
+6 -> Bb | BB -> 5
+6 -> Z | Z -> 2
+```
