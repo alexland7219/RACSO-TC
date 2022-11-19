@@ -251,3 +251,19 @@ P -> M | BMA, M | -> P
 P -> Aa |, Bb |, Cc | -> P
 P -> Z | Z -> F
 ```
+
+### Exercise 15: Uniquely-accepting PDA for $\\{ a^i b^j c^k d \mid i=j \\} \cup \\{a^i b^j c^k e\mid j=k \\}$
+
+Write a **uniquely-accepting** PDA (**which cannot be deterministic**) recognizing the words of the form $a^i b^j c^k d$ with the same amount of $a$'s and $b$'s, and of the form $a^i b^j c^k e$ with the same amount of $b$'s and $c$'s.
+
+```ruby
+Z I F
+I -> Z | ZS -> P
+P -> S | DKJ, S | EHU -> P
+P -> K | CK, K | -> P
+P -> J | BJA, J | -> P
+P -> H | CHB, H | -> P
+P -> U | AU, U | -> P
+P -> Aa |, Bb |, Cc |, Dd |, Ee | -> P
+P -> Z | Z -> F
+```
