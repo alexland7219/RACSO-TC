@@ -302,3 +302,18 @@ Z 1 1
 2 -> P[ | PB, B( | BP, P) |, B] |, P( | PP, B[ | BB -> 2
 2 -> Z | Z -> 1
 ```
+
+### Exercise 19: Deterministic uniquely-accepting PDA for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge |x|\_{a}=|y|\_{b} \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words of the form $xcy$, where $x$, $y$ are words over $\\{a,b\\}$ such that the number of occurrences of $a$ in $x$ is equal to the number of occurrences of $b$ in $y$.
+
+```ruby
+Z 1 F
+1 -> Zb | Z, Za | ZA, Aa | AA, Ab | A -> 1
+1 -> Zc | Z, Ac | A -> 2
+2 -> Aa | A, Ab | -> 2
+2 -> Z | Z -> F
+F -> Za | Z -> F
+```
+
+```ruby
