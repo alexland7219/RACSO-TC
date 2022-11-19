@@ -236,7 +236,7 @@ P -> Cc |, Bb |, Aa | -> P
 P -> Z | Z -> F
 ```
 
-### Exercise 14: PDA for $\\{a^i b^j c^k \mid j=k \vee i=k \\}$
+### Exercise 14: PDA for $\\{a^i b^j c^k \mid i=j \vee j=k \\}$
 
 Write a PDA (**which will be non-deterministic and non-uniquely-accepting**) recognizing the words of the form $a^i b^j c^k$ with the same amount of $a$'s and $b$'s or the same amount of $b$'s and $c$'s.
 
