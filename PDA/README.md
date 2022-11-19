@@ -291,3 +291,14 @@ Z 1 1
 2 -> O) | -> 2
 2 -> Z | Z -> 1
 ```
+
+### Exercise 18: Deterministic uniquely-accepting PDA for the well-parenthesized words over $\\{ [ , ] , ( , ) \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the language of the well-paranthesized words over $\\{ [ , ] , ( , ) \\}$.
+
+```ruby
+Z 1 1
+1 -> Z( | ZP, Z[ | ZB -> 2
+2 -> P[ | PB, B( | BP, P) |, B] |, P( | PP, B[ | BB -> 2
+2 -> Z | Z -> 1
+```
