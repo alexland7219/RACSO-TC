@@ -279,3 +279,15 @@ P -> S | ASA, S | BSB, S | A, S | B, S | -> P
 P -> Aa |, Bb | -> P
 P -> Z | Z -> F
 ```
+
+### Exercise 17: Deterministic uniquely-accepting PDA for the well-parenthesized words over $\\{ ( , ) \\}$
+
+Write a **deterministic uniquely-accepting** PDA recognizing the language of the well-paranthesized words over $\\{ ( , ) \\}$. For example, $()(())$ and $(((()())))$ are well-parenthesized words, whereas $)($ and $(()$ are not. One way to define more precisely this language is to describe it as the set of words that can be reduced to the empty word by successive applications of the rewrite rule $()\to\lambda$.
+
+```ruby
+Z 1 1
+1 -> Z( | ZO -> 2
+2 -> O( | OO -> 2
+2 -> O) | -> 2
+2 -> Z | Z -> 1
+```
