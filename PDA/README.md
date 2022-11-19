@@ -316,7 +316,7 @@ Z 1 F
 F -> Za | Z -> F
 ```
 
-### Exercise 19: Deterministic uniquely-accepting PDA for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge |x|\_{ab}=|y|\_{ba} \\}$
+### Exercise 20: Deterministic uniquely-accepting PDA for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge |x|\_{ab}=|y|\_{ba} \\}$
 
 Write a **deterministic uniquely-accepting** PDA recognizing the words of the form $xcy$, where $x$, $y$ are words over $\\{a,b\\}$ such that the number of occurrences of $ab$ in $x$ is equal to the number of occurrences of $ba$ in $y$.
 
@@ -336,4 +336,36 @@ Z 1 F G
 F -> Za | Z -> F
 F -> Zb | Z -> G
 G -> Zb | Z -> G
+```
+### Exercise 20: Deterministic uniquely-accepting PDA for $\\{ xcy \mid x,y\in\\{a,b\\}^* \wedge |x|\_{aba}=|y|\_{bab} \\}$
+
+
+Write a **deterministic uniquely-accepting** PDA recognizing the words of the form $xcy$, where $x$, $y$ are words over $\\{a,b\\}$ such that the number of occurrences of $aba$ in $x$ is equal to the number of occurrences of $bab$ in $y$.
+
+```ruby
+Z 1 7 8 9 Q
+1 -> Zb | Z, Ab | A -> 1
+1 -> Aa | A, Za | Z -> 2
+2 -> Aa | A, Za | Z -> 2
+2 -> Zb | Z, Ab | A -> 3
+3 -> Zb | Z, Ab | A -> 1
+3 -> Za | ZA, Aa | AA -> 2
+1 -> Zc | Z, Ac | A -> 4
+2 -> Zc | Z, Ac | A -> 4
+3 -> Zc | Z, Ac | A -> 4
+4 -> Aa | A -> 4
+4 -> Z | Z -> 8
+4 -> Ab | A -> 5
+5 -> Ab | A -> 5
+5 -> Aa | A -> 6
+5 -> Z | Z -> 7
+6 -> Ab | -> 5
+6 -> Aa | A -> 4
+7 -> Zb | Z -> 7
+7 -> Za | Z -> 9
+8 -> Za | Z -> 8
+8 -> Zb | Z -> 7
+9 -> Za | Z -> Q
+Q -> Za | Z -> Q
+Q -> Zb | Z -> 7
 ```
