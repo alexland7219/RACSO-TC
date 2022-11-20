@@ -199,3 +199,23 @@ input y
   	accept;
 }
 ```
+
+### Exercise 15 $\neg K \leq \\{\langle p, q \rangle \mid \exists y : (M_p(y)\downarrow \wedge M_q(y)\uparrow)\\}$
+
+Reduce $K$ to the set of pairs of natural numbers codifying programs such that there exists an input for which the first program halts and the second program does not halt (roughly, the set of pairs of programs which stop and do not stop with some common input), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+	if (mxxstopsininputsteps)
+		infiniteloop;
+ 	else accept;
+}
+
+input y
+{
+	runmxx;
+  	accept;
+}
+```
+
