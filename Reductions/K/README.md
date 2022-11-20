@@ -54,6 +54,8 @@ input y
 
 ### Exercise 5: $\neg K \leq\ \\{ p \mid \forall y:\ M\_p(y)=y \\}$
 
+Reduce $\neg K$ to the set of natural numbers such that the program codified by them computes the identity function (roughly, the set of programs that compute the identity function), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
 ```c
 input y
 {
@@ -68,6 +70,8 @@ _Note:_ $x \notin K \Rightarrow M_x(x)\ \uparrow \Rightarrow \forall y\ M_p(y) =
 
 ### Exercise 6: $\neg K \leq\ \\{ p \mid \varphi_p\text{ total and injective} \\}$
 
+Reduce $\neg K$ to the set of natural numbers such that the program codified by them computes some total and injective function (roughly, the set of programs that compute some total and injective function), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
 ```c
 input y
 {
@@ -79,3 +83,4 @@ input y
 ```
 
 _Note: The identity function is total and injective_
+
