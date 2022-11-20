@@ -9,7 +9,34 @@ Reduce $K$ to the set of natural numbers codifying programs such that the progra
 ```c
 input y
 {
-    if (mxxstopsininputsteps)
-        accept;
+    runmxx;
     infiniteloop;
 }
+```
+
+### Exercise 2: $\overline{K}\ \leq\ \\{ p \mid \forall y:\ M\_p(y){\downarrow} \\}$
+
+Reduce $\overline(K)$ to the set of natural numbers such that the program codified by them halts with any input (roughly, the set of programs that halt with any input), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+    if (mxxstopsininputsteps)
+        infiniteloopp;
+    
+    accept;
+}
+```
+
+### Exercise 3: $\overline{K}\ \leq\ \\{ p \mid \exists y:\ M\_p(y){\uparrow} \\}$
+
+Reduce $\overline(K)$ to the set of natural numbers such that the program codified by them does not halt with some input (roughly, the set of programs non-halting with some input), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+    runmxx;
+    accept;
+}
+```
+
