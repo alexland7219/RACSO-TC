@@ -152,3 +152,32 @@ input y
   	output (y % 2);
 }
 ```
+
+### Exercise 12: $\neg K\ \leq\ \\{ p \mid |\mathtt{Im}(\varphi_p)|=2 \\}$
+
+Reduce $\neg K$ to the set of natural numbers codifying programs such that the image of the function computed by the program has cardinal $2$ (roughly, the set of programs implementing functions whose image has exactly two elements) in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+	if (not mxxstopsininputsteps) output (y % 2);
+  	else output y;
+}
+```
+
+### Exercise 13: $\neg K\ \leq\ \\{ p \mid |\mathtt{Dom}(\varphi_p)|=\infty\ \wedge\ |\mathtt{Im}(\varphi_p)|=\infty\ \wedge\ \mathtt{Dom}(\varphi_p)\cap\mathtt{Im}(\varphi_p)=\emptyset \\}$
+
+Reduce $K$ to the set of natural numbers codifying programs such that the domain and the image of the function computed by the program have infinite cardinal and are disjoint (roughly, the set of programs implementing functions whose domain and image are infinite and disjoint) in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+ 	if (not mxxstopsininputsteps){
+		if (y % 2) output y + 1;
+	  	else reject;
+  	}
+  	else reject;
+}
+```
+
+_Note: In this case the domain are the even numbers and the image the odd numbers. Both sets are disjoint, and will be infinite if the machine never halts for any y. If it were to halt after some y, then we would only reject and never reach infinity_
