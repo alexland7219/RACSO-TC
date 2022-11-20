@@ -52,7 +52,7 @@ input y
 }
 ```
 
-### Exercise 5: $\overline{K} \leq\ \\{ p \mid \forall y:\ M\_p(y)=y \\}$
+### Exercise 5: $\overline\\{K\\} \leq\ \\{ p \mid \forall y:\ M\_p(y)=y \\}$
 
 ```c
 input y
@@ -64,4 +64,4 @@ input y
 }
 ```
 
-__Note:__ $x \notin K \Rightarrow M_x(x) \uparrow \Rightarrow \forall y M_p(y) = y$ __where__ $p$ __is the program we just built. Then__ $x \in \\{p \mid \forall y M_p(y) = y\\}$.
+_Note:_ $x \notin K \Rightarrow M_x(x) \uparrow \Rightarrow \forall y M_p(y) = y$ _where_ $p$ _is the program we just built. Then_ $x \in \\{p \mid \forall y M_p(y) = y\\}$.
