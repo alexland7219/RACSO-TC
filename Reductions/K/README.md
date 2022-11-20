@@ -10,7 +10,7 @@ Reduce $K$ to the set of natural numbers codifying programs such that the progra
 input y
 {
     runmxx;
-    infiniteloop;
+    accept;
 }
 ```
 
