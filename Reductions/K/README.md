@@ -181,3 +181,21 @@ input y
 ```
 
 _Note: In this case the domain are the even numbers and the image the odd numbers. Both sets are disjoint, and will be infinite if the machine never halts for any y. If it were to halt after some y, then we would only reject and never reach infinity_
+
+### Exercise 14: $K\ \leq\ \\{ \langle p,q\rangle \mid \exists y:\ (M_p(y){\downarrow} \ \wedge\  M_q(y){\downarrow}) \\}$
+
+Reduce $K$ to the set of pairs of natural numbers codifying programs halting with a common input (roughly, the set of pairs of programs which stop with the same common input), in order to prove that such set is undecidable (not recursive).
+
+```c
+input y
+{
+	runmxx;
+  	accept;
+}
+
+input y
+{
+	runmxx;
+  	accept;
+}
+```
