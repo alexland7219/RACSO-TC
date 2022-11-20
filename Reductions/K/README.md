@@ -97,7 +97,7 @@ input y {
 
 ### Exercise 8: $\neg K\ \leq\ \\{ p \mid M_p(1){\downarrow} \ \wedge\  M_p(2){\uparrow} \\}$
 
-Reduce $\neg K$ K to the set of natural numbers such that the program codified by them halt with input 11 and do not halt with input 22 (roughly, the set of programs that halt with input 11 and do not halt with input 22), in order to prove that such set is not semi-decidable (not recursively enumerable).
+Reduce $\neg K$ K to the set of natural numbers such that the program codified by them halt with input $1$ and do not halt with input $2$ (roughly, the set of programs that halt with input $1$ and do not halt with input $2$), in order to prove that such set is not semi-decidable (not recursively enumerable).
 
 ```c
 input y
@@ -124,6 +124,21 @@ input y
 ```
 
 _Note: If we are in a negative case and_ $M_x(x)$ _does not halt, then the domain will be zero since the program will not halt._
+
+### Exercise 10: $\neg K\ \leq\ \\{ p \mid |\mathtt{Dom}(\varphi_p)|=2 \\}$
+
+Reduce $\neg K$ to the set of natural numbers codifying programs such that the domain of the function computed by the program has cardinal $2$ (roughly, the set of programs implementing functions whose domain has exactly two elements) in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+  	if (not mxxstopsininputsteps){
+  		if (y == 0 or y == 1) accept;
+	  	else reject;
+	}
+  	else accept;
+}
+```
 
 ### Exercise 11: $K\ \leq\ \\{ p \mid |\mathtt{Im}(\varphi_p)|\geq 2 \\}$
 
