@@ -200,9 +200,9 @@ input y
 }
 ```
 
-### Exercise 15 $\neg K \leq \\{\langle p, q \rangle \mid \exists y : (M_p(y)\downarrow \wedge M_q(y)\uparrow)\\}$
+### Exercise 15: $\neg K \leq \\{\langle p, q \rangle \mid \exists y : (M_p(y)\downarrow \wedge\ M_q(y)\uparrow)\\}$
 
-Reduce $K$ to the set of pairs of natural numbers codifying programs such that there exists an input for which the first program halts and the second program does not halt (roughly, the set of pairs of programs which stop and do not stop with some common input), in order to prove that such set is not semi-decidable (not recursively enumerable).
+Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that there exists an input for which the first program halts and the second program does not halt (roughly, the set of pairs of programs which stop and do not stop with some common input), in order to prove that such set is not semi-decidable (not recursively enumerable).
 
 ```c
 input y
@@ -213,9 +213,30 @@ input y
 }
 
 input y
-{
+{_
 	runmxx;
   	accept;
 }
 ```
 
+### Exercise 16: $\neg K \leq \\{\langle p, q \rangle \mid \exists y_1, y_2 : (M_p(y_1)\downarrow \wedge\ M_q(y_1)\uparrow \wedge\ M_p(y_2)\uparrow \wedge\ M_q(y_2)\downarrow)\\}$
+
+Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that there exists an input for which the first program halts and the second program does not halt, and there exists an input for which the first program does not halt and the second program halts, (roughly, the set of pairs of programs which stop and do not stop with some common input, and do not stop and stop with some other common input), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+
+```c
+input y
+{
+	if (y == 0) accept;
+  	
+  	runmxx;
+  
+  	accept;
+}	
+
+input y
+{
+	if (y == 0) infiniteloop;
+  	else accept;
+}
+```
