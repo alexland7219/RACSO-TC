@@ -84,7 +84,7 @@ input y
 
 _Note: The identity function is total and injective_
 
-### Exercise 8: $\neg K\ \leq\ \\{ p \mid M_p(1){\downarrow} \,\wedge\, M_p(2){\uparrow} \\}$
+### Exercise 8: $\neg K\ \leq\ \\{ p \mid M_p(1){\downarrow} \ \wedge\  M_p(2){\uparrow} \\}$
 
 Reduce $\neg K$ K to the set of natural numbers such that the program codified by them halt with input 11 and do not halt with input 22 (roughly, the set of programs that halt with input 11 and do not halt with input 22), in order to prove that such set is not semi-decidable (not recursively enumerable).
 
@@ -99,3 +99,17 @@ input y
   	
 }
 ```
+
+### Exercise 9: $K\ \leq\ \\{ p \mid |\mathtt{Dom}(\varphi_p)|\geq 2 \\}$
+
+Reduce $K$ to the set of natural numbers codifying programs such that the domain of the function computed by the program has cardinal at least $2$ (roughly, the set of programs implementing functions whose domain has at least two elements) in order to prove that such set is undecidable (not recursive).
+
+```c
+input y
+{
+	runmxx;
+  	output y;
+}
+```
+
+_Note: If we are in a negative case and_ $M_x(x)$ _does not halt, then the domain will be zero since the program will not halt._
