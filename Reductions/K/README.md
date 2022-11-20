@@ -64,4 +64,4 @@ input y
 }
 ```
 
-_Note:_ $x \notin K \Rightarrow M_x(x) \uparrow \Rightarrow \forall y M_p(y) = y$ _where_ $p$ _is the program we just built. Then_ $x \in \\{p \mid \forall y M_p(y) = y\\}$.
+_Note:_ $x \notin K \Rightarrow M_x(x)\ \uparrow \Rightarrow \forall y\ M_p(y) = y$ _where_ $p$ _is the program we just built. Then_ $x \in \\{p \mid \forall y\ M_p(y) = y\\}$.
