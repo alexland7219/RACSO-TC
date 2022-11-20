@@ -113,3 +113,16 @@ input y
 ```
 
 _Note: If we are in a negative case and_ $M_x(x)$ _does not halt, then the domain will be zero since the program will not halt._
+
+### Exercise 11: $K\ \leq\ \\{ p \mid |\mathtt{Im}(\varphi_p)|\geq 2 \\}$
+
+Reduce $K$ to the set of natural numbers codifying programs such that the image of the function computed by the program has cardinal at least $2$ (roughly, the set of programs implementing functions whose image has at least two elements) in order to prove that such set is undecidable (not recursive).
+
+```c
+input y
+{
+	runmxx;
+  	
+  	output (y % 2);
+}
+```
