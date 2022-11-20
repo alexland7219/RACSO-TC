@@ -84,6 +84,17 @@ input y
 
 _Note: The identity function is total and injective_
 
+### Exercise 7: $\neg K\ \leq\ \\{ p \mid \varphi_p\text{ total and non-injective} \\}$
+
+Reduce $\neg K$ to the set of natural numbers such that the program codified by them computes some total and non-injective function (roughly, the set of programs that compute some total and non-injective function), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y {
+	if (not mxxstopsininputsteps) output 0;
+	else infiniteloop;
+}
+```
+
 ### Exercise 8: $\neg K\ \leq\ \\{ p \mid M_p(1){\downarrow} \ \wedge\  M_p(2){\uparrow} \\}$
 
 Reduce $\neg K$ K to the set of natural numbers such that the program codified by them halt with input 11 and do not halt with input 22 (roughly, the set of programs that halt with input 11 and do not halt with input 22), in order to prove that such set is not semi-decidable (not recursively enumerable).
