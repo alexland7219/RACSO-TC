@@ -40,7 +40,7 @@ input y
 }
 ```
 
-### Exercise 4: $\overline{K} \leq\ \\{ p \mid \forall y:\ M\_p(y){\uparrow} \\}$
+### Exercise 4: $\neg K \leq\ \\{ p \mid \forall y:\ M\_p(y){\uparrow} \\}$
 
 Reduce $\overline(K)$ to the set of natural numbers such that the program codified by them does not halt with any input (roughly, the set of programs non-halting with any input), in order to prove that such set is not semi-decidable (not recursively enumerable).
 
@@ -52,7 +52,7 @@ input y
 }
 ```
 
-### Exercise 5: $\overline\\{K\\} \leq\ \\{ p \mid \forall y:\ M\_p(y)=y \\}$
+### Exercise 5: $\overline{K} \leq\ \\{ p \mid \forall y:\ M\_p(y)=y \\}$
 
 ```c
 input y
