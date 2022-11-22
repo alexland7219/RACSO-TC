@@ -19,7 +19,7 @@ main
 
 ## 2. Regular description for $\\{ w \in \\{0,1\\}^* \mid (|w|-2\in\dot{4})\ \vee\ (\mathtt{value}_2(w)\in\dot{5})\\}$
 
-Give a regular description for the set of words $w$ over $\\{0,1\\}$ such that the length of $w$ is a multiple of $4$ plus $2$, or the natural value obtained by interpreting $w$ as a binary number, that is $\mathtt(value)_2(x)$, is multiple of $5$.
+Give a regular description for the set of words $w$ over $\\{0,1\\}$ such that the length of $w$ is a multiple of $4$ plus $2$, or the natural value obtained by interpreting $w$ as a binary number, that is $\mathtt{value}_2(x)$, is multiple of $5$.
 
 ```c++
 main
