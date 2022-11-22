@@ -38,6 +38,24 @@ Z 1 2
 1 -> T) | -> 2
 2 -> K( | K -> 1 
 ```
+
+## 3. Regular description for $\mathtt{SWAP}(\\{ a^ib^jc^k \mid i,j,k\geq 0 \\})$
+
+Give a regular description for the language of the words that can be obtained by swapping exactly two symbols on a word of the form $a^i b^j c^k$ for $i,j,k \ge 0$.
+
+```c++
+main
+{
+	a = "a"; b = "b"; c = "c";
+  	l = (a | b | c);
+  	
+  	NOT_SWAP = a b c | a b | b c | a c | l | "";
+  	PERMS = a* b a* b* a b* c* | a* b* c b* c* b c* | a* c a* b* c* a c* | a* b* c*; 
+  	
+  	output PERMS - NOT_SWAP; 
+}
+```
+
 ## 4. Regular description (with at most $500$ characters) for the finite language $\\{ xy \in \\{a,b,c,d\\}^* \mid |x|=|y| \wedge \forall s\in\\{a,b,c,d\\}: (|x|\_s\leq 1 \wedge |y|\_s\leq 1) \\}$
 
 Give a regular description (using at most $500$ characters in the description) for the set of words over $\\{a,b,c,d\\}$ of the form $xy$, where $x$ and $y$ are words with the same length and without repetitions of symbols.
