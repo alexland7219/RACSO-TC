@@ -241,7 +241,7 @@ input y
 }
 ```
 
-### Exercise 17: $K \leq \\{\langle p, q \rangle \mid \mid \mathtt{Dom}(\varphi_p)\cap\mathtt{Dom}(\varphi_q)\mid \ge 2\\}$
+### Exercise 17: $K \leq \\{\langle p, q \rangle \mid | \mathtt{Dom}(\varphi_p)\cap\mathtt{Dom}(\varphi_q)| \ge 2\\}$
 
 Reduce $K$ to the set of pairs of natural numbers codifying programs such that the domains of the functions implemented by them share at least two elements (roughly, the set of pairs of programs implementing functions whose domains share at least two elements), in order to prove that such set is undecidable (not recursive).
 
@@ -259,3 +259,4 @@ input y
 }
 ```
 
+###
