@@ -38,6 +38,29 @@ Z 1 2
 1 -> T) | -> 2
 2 -> K( | K -> 1 
 ```
+## 4. Regular description (with at most $500$ characters) for the finite language $\\{ xy \in \\{a,b,c,d\\}^* \mid |x|=|y| \wedge \forall s\in\\{a,b,c,d\\}: (|x|\_s\leq 1 \wedge |y|\_s\leq 1) \\}$
+
+Give a regular description (using at most $500$ characters in the description) for the set of words over $\\{a,b,c,d\\}$ of the form $xy$, where $x$ and $y$ are words with the same length and without repetitions of symbols.
+
+```c++
+main
+{
+	a = "a"; b = "b"; c = "c"; d = "d";
+  	w = (a|b|c|d);
+  	e = w*;
+  
+  	k = e a e a e;
+  	l = e b e b e;
+  	m = e c e c e;
+  	n = e d e d e;
+  	
+  	f = e - l - m - n - k;
+	
+  	s2 = w w; s3 = w w w; s4 = w w w w;
+  
+  	output "" | (w w) | (f & s2) (f & s2) | (f & s3) (f & s3) | (f & s4) (f & s4);
+}
+```
 
 ## 5. Deterministic uniquely-accepting PDA (with at most $2$ states) for well-parenthesized words over $\\{(,)\\}$ that terminate with $))$
 
