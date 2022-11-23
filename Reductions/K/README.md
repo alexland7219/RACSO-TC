@@ -456,3 +456,27 @@ input y
  	else accept;
 }
 ```
+
+### Exercise 27
+
+Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that the domains of the functions implemented by them are infinite and disjoint, and the first domain has more elements than the second when they are intersected by any subset of the form $\\{0,1,2,\ldots,y\\}$ (roughly, the set of pairs of programs implementing functions whose domains are infinite the first domain has more elements than the second when only elements smaller than a given arbitrary $y$ are considered), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+	if (not mxxstopsininputsteps)
+		if (y % 3 != 2) accept;
+  		else reject;
+ 	else accept;
+}
+
+input y
+{
+	if (not mxxstopsininputsteps)
+	  	if (y % 3 == 2) accept;
+  		else reject;
+  	else accept;
+}
+```
+
+_Note: Working with multiples of 3, note how the domain of both is infinite, but the first one (mod 0 or 1) is always larger than the second one (mod 2)_
