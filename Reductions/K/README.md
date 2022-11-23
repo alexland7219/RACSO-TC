@@ -375,7 +375,6 @@ input y
 
 Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that the domain of the function computed by the machine codified by the first one is included into the domain of the function computed by the machine codified by the second one (roughly, the set of pairs of programs such that the domain of the function computed by the first one is included into the domain of the function computed by the second one), in order to prove that such set is not semi-decidable (not recursively enumerable).
 
-
 ```c
 input y
 {
@@ -391,5 +390,47 @@ input y
 	  	if (y == 0) accept;
   		else reject;
   	else reject;
+}
+```
+
+### Exercise 24: $\neg K \leq \\{\langle p, q \rangle \mid \mathtt{Dom}(\varphi_p) \subset \mathtt{Dom}(\varphi_q)\\}$
+
+Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that the domain of the function computed by the machine codified by the first one is strictly included into the domain of the function computed by the machine codified by the second one (roughly, the set of pairs of programs such that the domain of the function computed by the first one is strictly included into the domain of the function computed by the second one), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+	if (not mxxstopsininputsteps) reject;
+  	else accept;
+}
+
+input y
+{
+	if (not mxxstopsininputsteps)
+		if (y == 0) accept;
+  		else reject;
+  	else reject;
+}
+```
+
+### Exercise 26: $\neg K \leq \\{\langle p, q \rangle \mid | \mathtt{Dom}(\varphi_p) | = \infty \wedge | \mathtt{Dom}(\varphi_q) | = \infty \wedge \mathtt{Dom}(\varphi_p) \cap \mathtt{Dom}(\varphi_q) = \emptyset \\}$
+
+Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that the domains of the functions implemented by them are infinite and share no element (roughly, the set of pairs of programs implementing functions whose domains are infinite and share no element), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+	if (not mxxstopsininputsteps)
+		if (y % 2 == 0) accept;
+  		else reject;
+  	else accept;
+}
+
+input y
+{
+	if (not mxxstopsininputsteps)
+	  	if (y % 2 == 1) accept;
+  		else reject;
+ 	else accept;
 }
 ```
