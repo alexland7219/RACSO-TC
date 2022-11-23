@@ -281,7 +281,7 @@ input y
 }
 ```
 
-### Exercise 19: $\neg K \leq \\{\langle p, q \rangle \mid | \mathtt{Dom}(\varphi_p) | = | \mathtt{Dom}(\varphi_q) | = | \mathtt{Im}(\varphi_p) | = | \mathtt{Im}(\varphi_q) | \wedge | \mathtt{Dom}(\varphi_p) \cup \mathtt{Dom}(\varphi_q) \cup  \mathtt{Im}(\varphi_p) \cup  \mathtt{Im1}(\varphi_q) | = 1\\}$
+### Exercise 19: $\neg K \leq \\{\langle p, q \rangle \mid | \mathtt{Dom}(\varphi_p) | = | \mathtt{Dom}(\varphi_q) | = | \mathtt{Im}(\varphi_p) | = | \mathtt{Im}(\varphi_q) | = 1 \wedge | \mathtt{Dom}(\varphi_p) \cup \mathtt{Dom}(\varphi_q) \cup  \mathtt{Im}(\varphi_p) \cup  \mathtt{Im1}(\varphi_q) | = 1\\}$
 
 Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that each domain and image of the function computed by each of such programs has exactly $1$ element, and the union of the domains and images of both programs has exactly $1$ element (roughly, the set of pairs of programs whose domains and images have exactly $1$ element, and the union of all such domains and images have exactly $1$ element) in order to prove that such set is not semi-decidable (not recursively enumerable).
 
@@ -304,7 +304,7 @@ input y
 }
 ```
 
-### Exercise 20: $\neg K \leq \\{\langle p, q \rangle \mid | \mathtt{Dom}(\varphi_p) | = | \mathtt{Dom}(\varphi_q) | = | \mathtt{Im}(\varphi_p) | = | \mathtt{Im}(\varphi_q) | \wedge | \mathtt{Dom}(\varphi_p) \cup \mathtt{Dom}(\varphi_q) \cup  \mathtt{Im}(\varphi_p) \cup  \mathtt{Im1}(\varphi_q) | = 2\\}$
+### Exercise 20: $\neg K \leq \\{\langle p, q \rangle \mid | \mathtt{Dom}(\varphi_p) | = | \mathtt{Dom}(\varphi_q) | = | \mathtt{Im}(\varphi_p) | = | \mathtt{Im}(\varphi_q) | = 1 \wedge | \mathtt{Dom}(\varphi_p) \cup \mathtt{Dom}(\varphi_q) \cup  \mathtt{Im}(\varphi_p) \cup  \mathtt{Im1}(\varphi_q) | = 2\\}$
 
 Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that each domain and image of the function computed by each of such programs has exactly $1$ element, and the union of the domains and images of both programs has exactly $2$ elements (roughly, the set of pairs of programs whose domains and images have exactly $1$ element, and the union of all such domains and images have exactly $2$ elements) in order to prove that such set is not semi-decidable (not recursively enumerable).
 
@@ -326,3 +326,26 @@ input y
  	else accept;
 }
 ```
+
+### Exercise 21: $\neg K \leq \\{\langle p, q \rangle \mid | \mathtt{Dom}(\varphi_p) | = | \mathtt{Dom}(\varphi_q) | = | \mathtt{Im}(\varphi_p) | = | \mathtt{Im}(\varphi_q) | = 1 \wedge | \mathtt{Dom}(\varphi_p) \cup \mathtt{Dom}(\varphi_q) \cup  \mathtt{Im}(\varphi_p) \cup  \mathtt{Im1}(\varphi_q) | = 3\\}$
+
+Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that each domain and image of the function computed by each of such programs has exactly $1$ element, and the union of the domains and images of both programs has exactly $3$ elements (roughly, the set of pairs of programs whose domains and images have exactly $1$ element, and the union of all such domains and images have exactly $3$ elements) in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+	if (not mxxstopsininputsteps)
+		if (y == 1) output 1;
+  		else reject;
+  	else accept;
+}
+
+input y
+{
+	if (not mxxstopsininputsteps)
+	  	if (y == 2) output 3;
+  		else reject;
+  	else accept;
+}
+```
+
