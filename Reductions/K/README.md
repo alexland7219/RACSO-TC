@@ -259,4 +259,25 @@ input y
 }
 ```
 
-###
+### Exercise 18: $\neg K \leq \\{\langle p, q \rangle \mid | \mathtt{Dom}(\varphi_p)\cap\mathtt{Dom}(\varphi_q)| = 2\\}$
+
+Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that the domains of the functions implemented by them share exactly two elements (roughly, the set of pairs of programs implementing functions whose domains share exactly two elements), in order to prove that such set is not semi-decidable (not recursively enumerable).
+
+```c
+input y
+{
+	if (not mxxstopsininputsteps)
+	  	if (y < 2) accept;
+  		else reject;
+ 	else accept;
+}
+
+input y
+{
+	if (not mxxstopsininputsteps)
+	  	if (y < 2) accept;
+  		else reject;
+ 	else accept;
+}
+```
+
