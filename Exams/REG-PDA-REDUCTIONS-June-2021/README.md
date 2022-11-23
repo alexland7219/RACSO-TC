@@ -1,6 +1,8 @@
 # Exam on REGs, PDAs and Reductions, June 4th, 2021
 
-## 1. Regular description for 
+## 1. Regular description for $\\{ w \in \\{a,b\\}^* \mid |w|\_{abba}=1\ \wedge\ (|w|\_{aaa}=0\ \vee\ |w|\_{bbb}\geq 2) \\}$
+
+Give a regular description for the set of words over $\\{a,b\\}$ such there is exactly one occurrence of $abba$, and moreover there is no occurrence of $aaa$ or there are at least two occurrences of $bbb$.
 
 ```c++
 main
@@ -28,7 +30,9 @@ main
 }
 ```
 
-## 2. Regular description for 
+## 2. Regular description for $\\{ w \in \\{0,1\\}^* \mid \mathtt{value}_2(w)\in\dot{12} \wedge \mathtt{value}_2(w^R)\in\dot{24}\\}$
+
+Give a regular description for the set of words $w$ over $\\{0,1\\}$ such that the natural value obtained by interpreting $w$ as a binary number, that is $\mathtt{value}_2(w)$, is multiple of $12$, and the natural value obtained by interpreting the reverse of $w$ as a binary number is multiple of $24$. The empty word represents $0$.
 
 ```c++
 main
@@ -67,7 +71,7 @@ P -> Bb |, Aa | -> P
 P -> Z | Z -> F
 ```
 
-## 4. Reduction $\neg K \leq \\{p \mid | \mathtt{Dom}(\varphi_p) | = \infty \wedge \overline{| \mathtt{Dom}(varphi_p) |} = \infty\\}$
+## 4. Reduction $\neg K \leq \\{p \mid | \mathtt{Dom}(\varphi_p) | = \infty \wedge \overline{| \mathtt{Dom}(\varphi_p) |} = \infty\\}$
 
 Reduce $\neg K$ to the set of natural numbers codifying programs such that the domain and the complement of the domain of the function computed by the program have infinite cardinal (roughly, the set of programs implementing functions whose domain and complement of domain are infinite), in order to prove that such set is not semi-decidable (not recursively enumerable).
 
