@@ -457,7 +457,7 @@ input y
 }
 ```
 
-### Exercise 27
+### Exercise 27: $\neg K\;\leq\;\{ \langle p,q\rangle \mid |\mathtt{Dom}(\varphi_p)|=\infty\;\wedge\;|\mathtt{Dom}(\varphi_q)|=\infty\;\wedge\;\mathtt{Dom}(\varphi_p)\cap\mathtt{Dom}(\varphi_q)=\emptyset\;\wedge\;\forall y:|\mathtt{Dom}(\varphi_p)\cap\{0,\ldots,y\}|&gt;|\mathtt{Dom}(\varphi_q)\cap\{0,\ldots,y\}| \}$
 
 Reduce $\neg K$ to the set of pairs of natural numbers codifying programs such that the domains of the functions implemented by them are infinite and disjoint, and the first domain has more elements than the second when they are intersected by any subset of the form $\\{0,1,2,\ldots,y\\}$ (roughly, the set of pairs of programs implementing functions whose domains are infinite the first domain has more elements than the second when only elements smaller than a given arbitrary $y$ are considered), in order to prove that such set is not semi-decidable (not recursively enumerable).
 
