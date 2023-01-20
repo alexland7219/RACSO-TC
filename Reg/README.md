@@ -57,76 +57,15 @@ Give a regular description for the set of words over $\\{a, b\\}$ such there is 
 ```c++
 main
 {
-    oneAAA = "
-			a  b 
-		I	A  I 
-		A	AA I
-		AA	Y  I 
-		Y	M  N +
-		M	M  M
-		N	T  N +
-		T	Y N +
-	";
+  	L = ("a"|"b");
   
-    	oneBBB = "
-			a  b 
-		I	I  A 
-		A	I  AA
-		AA	I  Y 
-		Y	N  M +
-		M	M  M
-		N	N  T +
-		T	N  Y +
-	";
- 
-	output oneAAA & oneBBB ; 
-}
-```
-
-_Note: This is the naive method. Intersection of two DFAs_
-
-
-```c++
-main
-{
-  	oneAAA = "
-			a  b 
-		I	A  I 
-		A	AA I
-		AA	Y  I 
-		Y	M  N +
-		M	M  M
-		N	T  N +
-		T	Y N +
-	";
- 
+  	NO_AAA = L* - (L* "aaa" L*);
+  	oneAAA = (NO_AAA "b" | "") "aaa" ("b" NO_AAA | "");
   	oneBBB = substitution(oneAAA, "a"->"b", "b"->"a");
   
 	output oneAAA & oneBBB ; 
 }
 ```
-
-_Note: This is the second method (and the easiest). Substitute a's for b's and just create one DFA._
-
-
-```c++
-main
-{
-	a = "a";
-  	b = "b";
-  	L = "";
-  
-  	Y = ( b | a b | a a b )* a a a ( b ( b | a b ) * a a ) *;
-  
-  	reg1 = Y ( L | b ( b | a b ) * ( L | a ) );
-  	reg2 = substitution(reg1, "a"->"b", "b"->"a");
-  
-  	output reg1 & reg2;
-}
-```
-
-_Note: This is without DFAs after converting oneAAA to a Regular expression by hand_
-
 
 ### Exercise 4: Regular description for $\\{ w \in \\{a,b\\}^* \mid |w|\_\{aba\}=|w|\_\{bab\}=1 \\}$
 
@@ -154,7 +93,7 @@ main
 }
 ```
 
-_Note: I've given just one possible solution. There's many more as I've shown before_
+_Note: I've given just one possible solution. There's many more_
 
 ### Exercise 5: Regular description for $\\{ w \in \\{a,b\\}^* \mid \exists w_1,w_2: (w=w_1aw_2\ \wedge\ |w_2|=5)\ \wedge\ |w|\_\{bbb\}&gt;0 \\}$
 
